@@ -19,12 +19,9 @@ namespace Training.DomainClasses
 
         public void Add(Pet newPet)
         {
-            foreach (var pet in _petsInTheStore)
+            if (_petsInTheStore.Contains(newPet))
             {
-                if (pet.name == newPet.name)
-                {
-                    return;
-                }
+                return;
             }
             _petsInTheStore.Add(newPet);
         }
