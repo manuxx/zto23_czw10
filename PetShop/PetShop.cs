@@ -13,21 +13,16 @@ namespace Training.DomainClasses
 
         public IEnumerable<Pet> AllPets()
         {
-            return _petsInTheStore;
+            foreach (var pet in _petsInTheStore)
+            {
+                yield return pet;
+            }
         }
 
         public void Add(Pet newPet)
         {
-<<<<<<< HEAD
-            if(!_petsInTheStore.Contains(newPet))
-            _petsInTheStore.Add(newPet);
-=======
-             foreach (var pet in _petsInTheStore)
-                if (newPet.name==pet.name)
-                    return;
-             _petsInTheStore.Add(newPet);
-
->>>>>>> main
+            if (!_petsInTheStore.Contains(newPet))
+                _petsInTheStore.Add(newPet);
         }
     }
 }

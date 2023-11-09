@@ -63,11 +63,7 @@ namespace Training.Specificaton
         static Pet pet;
     }
 
-<<<<<<< HEAD
-=======
-
->>>>>>> main
-	public class when_adding_an_existing_pet_again_ : pet_shop_concern
+    public class when_adding_an_existing_pet_again_ : pet_shop_concern
     {
         Establish context = () =>
         {
@@ -84,11 +80,7 @@ namespace Training.Specificaton
         private static Pet pet;
     }
 
-<<<<<<< HEAD
-=======
-
->>>>>>> main
-	public class when_adding_a_new_pet_with_existing_name_ : pet_shop_concern
+    public class when_adding_a_new_pet_with_existing_name_ : pet_shop_concern
     {
         Establish context = () =>
         {
@@ -119,6 +111,4 @@ namespace Training.Specificaton
         private static Exception exception;
         It invalid_cast_exception_should_be_thrown = () => exception.ShouldBeOfExactType<InvalidCastException>();
     }
-
-
 }
