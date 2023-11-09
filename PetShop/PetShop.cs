@@ -14,7 +14,13 @@ namespace Training.DomainClasses
 
         public IEnumerable<Pet> AllPets()
         {
-            return _petsInTheStore;
+            // nie czytamy linia po linii tylko ma sens razem, "stworz iterator"
+            // to jest idiom - kompilator jak widzi taki kod to czyta to jako "zrob z tego iterator"
+            // jako ze ten iterator nie bedzie wykorzystany, petla sie nie wykona ani razu
+            foreach (var pet in _petsInTheStore)
+            {
+                yield return pet;
+            }
         }
 
         public void Add(Pet newPet)
