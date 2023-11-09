@@ -23,6 +23,13 @@ namespace Training.DomainClasses
             {
                 return;
             }
+            foreach (var pet in _petsInTheStore)
+            {
+                if (pet.name == newPet.name)
+                {
+                    return;
+                }
+            }
             _petsInTheStore.Add(newPet);
         }
     }

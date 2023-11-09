@@ -80,7 +80,6 @@ namespace Training.Specificaton
         private static Pet pet;
     }
 
-	[Ignore("Will be implemented 3'rd")]
 	public class when_adding_a_new_pet_with_existing_name_ : pet_shop_concern
     {
         Establish context = () =>
