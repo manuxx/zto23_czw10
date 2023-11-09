@@ -1,4 +1,3 @@
-using System;
 using System.Collections.Generic;
 
 namespace Training.DomainClasses
@@ -9,7 +8,7 @@ namespace Training.DomainClasses
 
         public PetShop(IList<Pet> petsInTheStore)
         {
-            this._petsInTheStore = petsInTheStore;
+            _petsInTheStore = petsInTheStore;
         }
 
         public IEnumerable<Pet> AllPets()
@@ -19,7 +18,14 @@ namespace Training.DomainClasses
 
         public void Add(Pet newPet)
         {
-            this._petsInTheStore.Add(newPet);
+            foreach (var pet in _petsInTheStore)
+            {
+                if (pet.name == newPet.name)
+                {
+                    return;
+                }
+            }
+            _petsInTheStore.Add(newPet);
         }
     }
 }
