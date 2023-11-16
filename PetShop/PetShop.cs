@@ -49,6 +49,57 @@ namespace Training.DomainClasses
             ret.Sort((p1,p2)=>p1.name.CompareTo(p2.name));
             return ret;
         }
+
+        public IEnumerable<Pet> AllMice()
+        {
+            return GetFilteredPets(pet => pet.species.Equals(Species.Mouse));
+        }
+
+        public IEnumerable<Pet> AllFemalePets()
+        {
+            return GetFilteredPets(pet => pet.sex.Equals(Sex.Female));
+        }
+
+        public IEnumerable<Pet> AllCatsOrDogs()
+        {
+            return GetFilteredPets(pet => pet.species.Equals(Species.Cat) || pet.species.Equals(Species.Dog));
+        }
+
+        public IEnumerable<Pet> AllPetsButNotMice()
+        {
+            return GetFilteredPets(pet => !pet.species.Equals(Species.Mouse));
+        }
+
+        public IEnumerable<Pet> AllPetsBornAfter2010()
+        {
+            return GetFilteredPets(pet => pet.yearOfBirth > 2010);
+        }
+
+        public IEnumerable<Pet> AllDogsBornAfter2010()
+        {
+            return GetFilteredPets(pet => pet.yearOfBirth > 2010 && pet.species.Equals(Species.Dog));
+        }
+
+        public IEnumerable<Pet> AllMaleDogs()
+        {
+            return GetFilteredPets(pet => pet.sex.Equals(Sex.Male) && pet.species.Equals(Species.Dog));
+        }
+
+        public IEnumerable<Pet> AllPetsBornAfter2011OrRabbits()
+        {
+            return GetFilteredPets(pet => pet.yearOfBirth > 2011 || pet.species.Equals(Species.Rabbit));
+        }
+
+        private IEnumerable<Pet> GetFilteredPets(Func<Pet, bool> condition)
+        {
+            foreach (var pet in _petsInTheStore)
+            {
+                if (condition.Invoke(pet))
+                {
+                    yield return pet;
+                }
+            }
+        }
     }
 
     public class ReadOnly : IEnumerable<Pet>
