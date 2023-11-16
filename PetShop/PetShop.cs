@@ -18,34 +18,6 @@ namespace Training.DomainClasses
             return new ReadOnly(_petsInTheStore);
         }
 
-        public class ReadOnly : IEnumerable<Pet>
-        {
-            private readonly IList<Pet> _petsInTheStore;
-
-            public ReadOnly(IList<Pet> petsInTheStore)
-            {
-                _petsInTheStore = petsInTheStore;
-            }
-
-            public IEnumerator<Pet> GetEnumerator()
-            {
-                return _petsInTheStore.GetEnumerator();
-            }
-
-            IEnumerator IEnumerable.GetEnumerator()
-            {
-                return GetEnumerator();
-            }
-        }
-
-        private static IEnumerable<Pet> OneAtATime(IList<Pet> pets)
-        {
-            foreach (var pet in pets)
-            {
-                yield return pet;
-            }
-        }
-
         public void Add(Pet newPet)
         {
             if (!_petsInTheStore.Contains(newPet))
@@ -60,6 +32,44 @@ namespace Training.DomainClasses
                 _petsInTheStore.Add(newPet);
             }
 
+        }
+
+        public IEnumerable<Pet> AllCats()
+        {
+            foreach (var pet in _petsInTheStore)
+            {
+                if (pet.species == Species.Cat)
+                {
+                    yield return pet;
+                }
+            }
+        }
+
+        public IEnumerable<Pet> AllPetsSortedByName()
+        {
+            var ret = new List<Pet>(_petsInTheStore);
+            ret.Sort((a, b) => a.name.CompareTo(b.name));
+            return ret;
+        }
+    }
+
+    public class ReadOnly : IEnumerable<Pet>
+    {
+        private readonly IEnumerable<Pet> _pets;
+
+        public ReadOnly(IEnumerable<Pet> pets)
+        {
+            _pets = pets;
+        }
+
+        public IEnumerator<Pet> GetEnumerator()
+        {
+            return _pets.GetEnumerator();
+        }
+
+        IEnumerator IEnumerable.GetEnumerator()
+        {
+            return GetEnumerator();
         }
     }
 }
