@@ -36,9 +36,14 @@ namespace Training.DomainClasses
 
         public IEnumerable<Pet> AllCats()
         {
+            return filterPets(pet => pet.species == Species.Cat);
+        }
+
+        private IEnumerable<Pet> filterPets(Func<Pet, bool> condition)
+        {
             foreach (var pet in _petsInTheStore)
             {
-                if (pet.species == Species.Cat)
+                if (condition(pet))
                     yield return pet;
             }
         }
@@ -46,8 +51,48 @@ namespace Training.DomainClasses
         public IEnumerable<Pet> AllPetsSortedByName()
         {
             var ret = new List<Pet>(_petsInTheStore);
-            ret.Sort((p1,p2)=>p1.name.CompareTo(p2.name));
+            ret.Sort((p1, p2) => p1.name.CompareTo(p2.name));
             return ret;
+        }
+
+        public IEnumerable<Pet> AllMice()
+        {
+            return filterPets(pet => pet.species == Species.Mouse);
+        }
+
+        public IEnumerable<Pet> AllFemalePets()
+        {
+            return filterPets(pet => pet.sex == Sex.Female);
+        }
+
+        public IEnumerable<Pet> AllCatsOrDogs()
+        {
+            return filterPets(pet => pet.species == Species.Cat || pet.species == Species.Dog);
+        }
+
+        public IEnumerable<Pet> AllPetsButNotMice()
+        {
+            return filterPets(pet => pet.species != Species.Mouse);
+        }
+
+        public IEnumerable<Pet> AllPetsBornAfter2010()
+        {
+            return filterPets(pet => pet.yearOfBirth > 2010);
+        }
+
+        public IEnumerable<Pet> AllDogsBornAfter2010()
+        {
+            return filterPets(pet => pet.yearOfBirth > 2010 && pet.species == Species.Dog);
+        }
+
+        public IEnumerable<Pet> AllMaleDogs()
+        {
+            return filterPets(pet => pet.sex == Sex.Male && pet.species == Species.Dog);
+        }
+
+        public IEnumerable<Pet> AllPetsBornAfter2011OrRabbits()
+        {
+            return filterPets(pet => pet.yearOfBirth > 2011 || pet.species == Species.Rabbit);
         }
     }
 
