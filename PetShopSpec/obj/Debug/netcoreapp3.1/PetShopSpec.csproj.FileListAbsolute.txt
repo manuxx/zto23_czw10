@@ -1,0 +1,210 @@
+D:\184918\zto23_czw10-main\PetShopSpec\bin\Debug\netcoreapp3.1\testhost.dll
+D:\184918\zto23_czw10-main\PetShopSpec\bin\Debug\netcoreapp3.1\testhost.exe
+D:\184918\zto23_czw10-main\PetShopSpec\bin\Debug\netcoreapp3.1\Machine.TestAdapter.dll
+D:\184918\zto23_czw10-main\PetShopSpec\bin\Debug\netcoreapp3.1\PetShopSpec.deps.json
+D:\184918\zto23_czw10-main\PetShopSpec\bin\Debug\netcoreapp3.1\PetShopSpec.runtimeconfig.json
+D:\184918\zto23_czw10-main\PetShopSpec\bin\Debug\netcoreapp3.1\PetShopSpec.runtimeconfig.dev.json
+D:\184918\zto23_czw10-main\PetShopSpec\bin\Debug\netcoreapp3.1\PetShopSpec.dll
+D:\184918\zto23_czw10-main\PetShopSpec\bin\Debug\netcoreapp3.1\PetShopSpec.pdb
+D:\184918\zto23_czw10-main\PetShopSpec\bin\Debug\netcoreapp3.1\Castle.Core.dll
+D:\184918\zto23_czw10-main\PetShopSpec\bin\Debug\netcoreapp3.1\Machine.Specifications.dll
+D:\184918\zto23_czw10-main\PetShopSpec\bin\Debug\netcoreapp3.1\Machine.Specifications.Should.dll
+D:\184918\zto23_czw10-main\PetShopSpec\bin\Debug\netcoreapp3.1\Microsoft.VisualStudio.CodeCoverage.Shim.dll
+D:\184918\zto23_czw10-main\PetShopSpec\bin\Debug\netcoreapp3.1\Microsoft.TestPlatform.CoreUtilities.dll
+D:\184918\zto23_czw10-main\PetShopSpec\bin\Debug\netcoreapp3.1\Microsoft.TestPlatform.PlatformAbstractions.dll
+D:\184918\zto23_czw10-main\PetShopSpec\bin\Debug\netcoreapp3.1\Microsoft.VisualStudio.TestPlatform.ObjectModel.dll
+D:\184918\zto23_czw10-main\PetShopSpec\bin\Debug\netcoreapp3.1\Microsoft.TestPlatform.CommunicationUtilities.dll
+D:\184918\zto23_czw10-main\PetShopSpec\bin\Debug\netcoreapp3.1\Microsoft.TestPlatform.CrossPlatEngine.dll
+D:\184918\zto23_czw10-main\PetShopSpec\bin\Debug\netcoreapp3.1\Microsoft.TestPlatform.Utilities.dll
+D:\184918\zto23_czw10-main\PetShopSpec\bin\Debug\netcoreapp3.1\Microsoft.VisualStudio.TestPlatform.Common.dll
+D:\184918\zto23_czw10-main\PetShopSpec\bin\Debug\netcoreapp3.1\Mono.Cecil.Mdb.dll
+D:\184918\zto23_czw10-main\PetShopSpec\bin\Debug\netcoreapp3.1\Mono.Cecil.Pdb.dll
+D:\184918\zto23_czw10-main\PetShopSpec\bin\Debug\netcoreapp3.1\Mono.Cecil.Rocks.dll
+D:\184918\zto23_czw10-main\PetShopSpec\bin\Debug\netcoreapp3.1\Mono.Cecil.dll
+D:\184918\zto23_czw10-main\PetShopSpec\bin\Debug\netcoreapp3.1\Moq.dll
+D:\184918\zto23_czw10-main\PetShopSpec\bin\Debug\netcoreapp3.1\Moq.AutoMock.dll
+D:\184918\zto23_czw10-main\PetShopSpec\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+D:\184918\zto23_czw10-main\PetShopSpec\bin\Debug\netcoreapp3.1\NuGet.Frameworks.dll
+D:\184918\zto23_czw10-main\PetShopSpec\bin\Debug\netcoreapp3.1\System.Diagnostics.EventLog.dll
+D:\184918\zto23_czw10-main\PetShopSpec\bin\Debug\netcoreapp3.1\cs\Microsoft.TestPlatform.CoreUtilities.resources.dll
+D:\184918\zto23_czw10-main\PetShopSpec\bin\Debug\netcoreapp3.1\cs\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll
+D:\184918\zto23_czw10-main\PetShopSpec\bin\Debug\netcoreapp3.1\de\Microsoft.TestPlatform.CoreUtilities.resources.dll
+D:\184918\zto23_czw10-main\PetShopSpec\bin\Debug\netcoreapp3.1\de\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll
+D:\184918\zto23_czw10-main\PetShopSpec\bin\Debug\netcoreapp3.1\es\Microsoft.TestPlatform.CoreUtilities.resources.dll
+D:\184918\zto23_czw10-main\PetShopSpec\bin\Debug\netcoreapp3.1\es\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll
+D:\184918\zto23_czw10-main\PetShopSpec\bin\Debug\netcoreapp3.1\fr\Microsoft.TestPlatform.CoreUtilities.resources.dll
+D:\184918\zto23_czw10-main\PetShopSpec\bin\Debug\netcoreapp3.1\fr\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll
+D:\184918\zto23_czw10-main\PetShopSpec\bin\Debug\netcoreapp3.1\it\Microsoft.TestPlatform.CoreUtilities.resources.dll
+D:\184918\zto23_czw10-main\PetShopSpec\bin\Debug\netcoreapp3.1\it\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll
+D:\184918\zto23_czw10-main\PetShopSpec\bin\Debug\netcoreapp3.1\ja\Microsoft.TestPlatform.CoreUtilities.resources.dll
+D:\184918\zto23_czw10-main\PetShopSpec\bin\Debug\netcoreapp3.1\ja\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll
+D:\184918\zto23_czw10-main\PetShopSpec\bin\Debug\netcoreapp3.1\ko\Microsoft.TestPlatform.CoreUtilities.resources.dll
+D:\184918\zto23_czw10-main\PetShopSpec\bin\Debug\netcoreapp3.1\ko\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll
+D:\184918\zto23_czw10-main\PetShopSpec\bin\Debug\netcoreapp3.1\pl\Microsoft.TestPlatform.CoreUtilities.resources.dll
+D:\184918\zto23_czw10-main\PetShopSpec\bin\Debug\netcoreapp3.1\pl\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll
+D:\184918\zto23_czw10-main\PetShopSpec\bin\Debug\netcoreapp3.1\pt-BR\Microsoft.TestPlatform.CoreUtilities.resources.dll
+D:\184918\zto23_czw10-main\PetShopSpec\bin\Debug\netcoreapp3.1\pt-BR\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll
+D:\184918\zto23_czw10-main\PetShopSpec\bin\Debug\netcoreapp3.1\ru\Microsoft.TestPlatform.CoreUtilities.resources.dll
+D:\184918\zto23_czw10-main\PetShopSpec\bin\Debug\netcoreapp3.1\ru\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll
+D:\184918\zto23_czw10-main\PetShopSpec\bin\Debug\netcoreapp3.1\tr\Microsoft.TestPlatform.CoreUtilities.resources.dll
+D:\184918\zto23_czw10-main\PetShopSpec\bin\Debug\netcoreapp3.1\tr\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll
+D:\184918\zto23_czw10-main\PetShopSpec\bin\Debug\netcoreapp3.1\zh-Hans\Microsoft.TestPlatform.CoreUtilities.resources.dll
+D:\184918\zto23_czw10-main\PetShopSpec\bin\Debug\netcoreapp3.1\zh-Hans\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll
+D:\184918\zto23_czw10-main\PetShopSpec\bin\Debug\netcoreapp3.1\zh-Hant\Microsoft.TestPlatform.CoreUtilities.resources.dll
+D:\184918\zto23_czw10-main\PetShopSpec\bin\Debug\netcoreapp3.1\zh-Hant\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll
+D:\184918\zto23_czw10-main\PetShopSpec\bin\Debug\netcoreapp3.1\cs\Microsoft.TestPlatform.CommunicationUtilities.resources.dll
+D:\184918\zto23_czw10-main\PetShopSpec\bin\Debug\netcoreapp3.1\cs\Microsoft.TestPlatform.CrossPlatEngine.resources.dll
+D:\184918\zto23_czw10-main\PetShopSpec\bin\Debug\netcoreapp3.1\cs\Microsoft.VisualStudio.TestPlatform.Common.resources.dll
+D:\184918\zto23_czw10-main\PetShopSpec\bin\Debug\netcoreapp3.1\de\Microsoft.TestPlatform.CommunicationUtilities.resources.dll
+D:\184918\zto23_czw10-main\PetShopSpec\bin\Debug\netcoreapp3.1\de\Microsoft.TestPlatform.CrossPlatEngine.resources.dll
+D:\184918\zto23_czw10-main\PetShopSpec\bin\Debug\netcoreapp3.1\de\Microsoft.VisualStudio.TestPlatform.Common.resources.dll
+D:\184918\zto23_czw10-main\PetShopSpec\bin\Debug\netcoreapp3.1\es\Microsoft.TestPlatform.CommunicationUtilities.resources.dll
+D:\184918\zto23_czw10-main\PetShopSpec\bin\Debug\netcoreapp3.1\es\Microsoft.TestPlatform.CrossPlatEngine.resources.dll
+D:\184918\zto23_czw10-main\PetShopSpec\bin\Debug\netcoreapp3.1\es\Microsoft.VisualStudio.TestPlatform.Common.resources.dll
+D:\184918\zto23_czw10-main\PetShopSpec\bin\Debug\netcoreapp3.1\fr\Microsoft.TestPlatform.CommunicationUtilities.resources.dll
+D:\184918\zto23_czw10-main\PetShopSpec\bin\Debug\netcoreapp3.1\fr\Microsoft.TestPlatform.CrossPlatEngine.resources.dll
+D:\184918\zto23_czw10-main\PetShopSpec\bin\Debug\netcoreapp3.1\fr\Microsoft.VisualStudio.TestPlatform.Common.resources.dll
+D:\184918\zto23_czw10-main\PetShopSpec\bin\Debug\netcoreapp3.1\it\Microsoft.TestPlatform.CommunicationUtilities.resources.dll
+D:\184918\zto23_czw10-main\PetShopSpec\bin\Debug\netcoreapp3.1\it\Microsoft.TestPlatform.CrossPlatEngine.resources.dll
+D:\184918\zto23_czw10-main\PetShopSpec\bin\Debug\netcoreapp3.1\it\Microsoft.VisualStudio.TestPlatform.Common.resources.dll
+D:\184918\zto23_czw10-main\PetShopSpec\bin\Debug\netcoreapp3.1\ja\Microsoft.TestPlatform.CommunicationUtilities.resources.dll
+D:\184918\zto23_czw10-main\PetShopSpec\bin\Debug\netcoreapp3.1\ja\Microsoft.TestPlatform.CrossPlatEngine.resources.dll
+D:\184918\zto23_czw10-main\PetShopSpec\bin\Debug\netcoreapp3.1\ja\Microsoft.VisualStudio.TestPlatform.Common.resources.dll
+D:\184918\zto23_czw10-main\PetShopSpec\bin\Debug\netcoreapp3.1\ko\Microsoft.TestPlatform.CommunicationUtilities.resources.dll
+D:\184918\zto23_czw10-main\PetShopSpec\bin\Debug\netcoreapp3.1\ko\Microsoft.TestPlatform.CrossPlatEngine.resources.dll
+D:\184918\zto23_czw10-main\PetShopSpec\bin\Debug\netcoreapp3.1\ko\Microsoft.VisualStudio.TestPlatform.Common.resources.dll
+D:\184918\zto23_czw10-main\PetShopSpec\bin\Debug\netcoreapp3.1\pl\Microsoft.TestPlatform.CommunicationUtilities.resources.dll
+D:\184918\zto23_czw10-main\PetShopSpec\bin\Debug\netcoreapp3.1\pl\Microsoft.TestPlatform.CrossPlatEngine.resources.dll
+D:\184918\zto23_czw10-main\PetShopSpec\bin\Debug\netcoreapp3.1\pl\Microsoft.VisualStudio.TestPlatform.Common.resources.dll
+D:\184918\zto23_czw10-main\PetShopSpec\bin\Debug\netcoreapp3.1\pt-BR\Microsoft.TestPlatform.CommunicationUtilities.resources.dll
+D:\184918\zto23_czw10-main\PetShopSpec\bin\Debug\netcoreapp3.1\pt-BR\Microsoft.TestPlatform.CrossPlatEngine.resources.dll
+D:\184918\zto23_czw10-main\PetShopSpec\bin\Debug\netcoreapp3.1\pt-BR\Microsoft.VisualStudio.TestPlatform.Common.resources.dll
+D:\184918\zto23_czw10-main\PetShopSpec\bin\Debug\netcoreapp3.1\ru\Microsoft.TestPlatform.CommunicationUtilities.resources.dll
+D:\184918\zto23_czw10-main\PetShopSpec\bin\Debug\netcoreapp3.1\ru\Microsoft.TestPlatform.CrossPlatEngine.resources.dll
+D:\184918\zto23_czw10-main\PetShopSpec\bin\Debug\netcoreapp3.1\ru\Microsoft.VisualStudio.TestPlatform.Common.resources.dll
+D:\184918\zto23_czw10-main\PetShopSpec\bin\Debug\netcoreapp3.1\tr\Microsoft.TestPlatform.CommunicationUtilities.resources.dll
+D:\184918\zto23_czw10-main\PetShopSpec\bin\Debug\netcoreapp3.1\tr\Microsoft.TestPlatform.CrossPlatEngine.resources.dll
+D:\184918\zto23_czw10-main\PetShopSpec\bin\Debug\netcoreapp3.1\tr\Microsoft.VisualStudio.TestPlatform.Common.resources.dll
+D:\184918\zto23_czw10-main\PetShopSpec\bin\Debug\netcoreapp3.1\zh-Hans\Microsoft.TestPlatform.CommunicationUtilities.resources.dll
+D:\184918\zto23_czw10-main\PetShopSpec\bin\Debug\netcoreapp3.1\zh-Hans\Microsoft.TestPlatform.CrossPlatEngine.resources.dll
+D:\184918\zto23_czw10-main\PetShopSpec\bin\Debug\netcoreapp3.1\zh-Hans\Microsoft.VisualStudio.TestPlatform.Common.resources.dll
+D:\184918\zto23_czw10-main\PetShopSpec\bin\Debug\netcoreapp3.1\zh-Hant\Microsoft.TestPlatform.CommunicationUtilities.resources.dll
+D:\184918\zto23_czw10-main\PetShopSpec\bin\Debug\netcoreapp3.1\zh-Hant\Microsoft.TestPlatform.CrossPlatEngine.resources.dll
+D:\184918\zto23_czw10-main\PetShopSpec\bin\Debug\netcoreapp3.1\zh-Hant\Microsoft.VisualStudio.TestPlatform.Common.resources.dll
+D:\184918\zto23_czw10-main\PetShopSpec\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.0\System.Diagnostics.EventLog.dll
+D:\184918\zto23_czw10-main\PetShopSpec\bin\Debug\netcoreapp3.1\PetShop.dll
+D:\184918\zto23_czw10-main\PetShopSpec\bin\Debug\netcoreapp3.1\PetShop.pdb
+D:\184918\zto23_czw10-main\PetShopSpec\obj\Debug\netcoreapp3.1\PetShopSpec.csproj.AssemblyReference.cache
+D:\184918\zto23_czw10-main\PetShopSpec\obj\Debug\netcoreapp3.1\PetShopSpec.GeneratedMSBuildEditorConfig.editorconfig
+D:\184918\zto23_czw10-main\PetShopSpec\obj\Debug\netcoreapp3.1\PetShopSpec.AssemblyInfoInputs.cache
+D:\184918\zto23_czw10-main\PetShopSpec\obj\Debug\netcoreapp3.1\PetShopSpec.AssemblyInfo.cs
+D:\184918\zto23_czw10-main\PetShopSpec\obj\Debug\netcoreapp3.1\PetShopSpec.csproj.CoreCompileInputs.cache
+D:\184918\zto23_czw10-main\PetShopSpec\obj\Debug\netcoreapp3.1\PetShopSpec.csproj.CopyComplete
+D:\184918\zto23_czw10-main\PetShopSpec\obj\Debug\netcoreapp3.1\PetShopSpec.dll
+D:\184918\zto23_czw10-main\PetShopSpec\obj\Debug\netcoreapp3.1\PetShopSpec.pdb
+D:\184918\zto23_czw10-main\PetShopSpec\obj\Debug\netcoreapp3.1\PetShopSpec.genruntimeconfig.cache
+C:\Users\oliwka\Documents\0 STUDIA\SEMESTR 7\ZTO\Warsztaty 2\wetransfer_zto23_czw10-main_2023-11-16_1057\zto23_czw10-main\PetShopSpec\bin\Debug\netcoreapp3.1\testhost.exe
+C:\Users\oliwka\Documents\0 STUDIA\SEMESTR 7\ZTO\Warsztaty 2\wetransfer_zto23_czw10-main_2023-11-16_1057\zto23_czw10-main\PetShopSpec\bin\Debug\netcoreapp3.1\testhost.dll
+C:\Users\oliwka\Documents\0 STUDIA\SEMESTR 7\ZTO\Warsztaty 2\wetransfer_zto23_czw10-main_2023-11-16_1057\zto23_czw10-main\PetShopSpec\bin\Debug\netcoreapp3.1\Machine.TestAdapter.dll
+C:\Users\oliwka\Documents\0 STUDIA\SEMESTR 7\ZTO\Warsztaty 2\wetransfer_zto23_czw10-main_2023-11-16_1057\zto23_czw10-main\PetShopSpec\bin\Debug\netcoreapp3.1\PetShopSpec.deps.json
+C:\Users\oliwka\Documents\0 STUDIA\SEMESTR 7\ZTO\Warsztaty 2\wetransfer_zto23_czw10-main_2023-11-16_1057\zto23_czw10-main\PetShopSpec\bin\Debug\netcoreapp3.1\PetShopSpec.runtimeconfig.json
+C:\Users\oliwka\Documents\0 STUDIA\SEMESTR 7\ZTO\Warsztaty 2\wetransfer_zto23_czw10-main_2023-11-16_1057\zto23_czw10-main\PetShopSpec\bin\Debug\netcoreapp3.1\PetShopSpec.runtimeconfig.dev.json
+C:\Users\oliwka\Documents\0 STUDIA\SEMESTR 7\ZTO\Warsztaty 2\wetransfer_zto23_czw10-main_2023-11-16_1057\zto23_czw10-main\PetShopSpec\bin\Debug\netcoreapp3.1\PetShopSpec.dll
+C:\Users\oliwka\Documents\0 STUDIA\SEMESTR 7\ZTO\Warsztaty 2\wetransfer_zto23_czw10-main_2023-11-16_1057\zto23_czw10-main\PetShopSpec\bin\Debug\netcoreapp3.1\PetShopSpec.pdb
+C:\Users\oliwka\Documents\0 STUDIA\SEMESTR 7\ZTO\Warsztaty 2\wetransfer_zto23_czw10-main_2023-11-16_1057\zto23_czw10-main\PetShopSpec\bin\Debug\netcoreapp3.1\Castle.Core.dll
+C:\Users\oliwka\Documents\0 STUDIA\SEMESTR 7\ZTO\Warsztaty 2\wetransfer_zto23_czw10-main_2023-11-16_1057\zto23_czw10-main\PetShopSpec\bin\Debug\netcoreapp3.1\Machine.Specifications.dll
+C:\Users\oliwka\Documents\0 STUDIA\SEMESTR 7\ZTO\Warsztaty 2\wetransfer_zto23_czw10-main_2023-11-16_1057\zto23_czw10-main\PetShopSpec\bin\Debug\netcoreapp3.1\Machine.Specifications.Should.dll
+C:\Users\oliwka\Documents\0 STUDIA\SEMESTR 7\ZTO\Warsztaty 2\wetransfer_zto23_czw10-main_2023-11-16_1057\zto23_czw10-main\PetShopSpec\bin\Debug\netcoreapp3.1\Microsoft.VisualStudio.CodeCoverage.Shim.dll
+C:\Users\oliwka\Documents\0 STUDIA\SEMESTR 7\ZTO\Warsztaty 2\wetransfer_zto23_czw10-main_2023-11-16_1057\zto23_czw10-main\PetShopSpec\bin\Debug\netcoreapp3.1\Microsoft.TestPlatform.CoreUtilities.dll
+C:\Users\oliwka\Documents\0 STUDIA\SEMESTR 7\ZTO\Warsztaty 2\wetransfer_zto23_czw10-main_2023-11-16_1057\zto23_czw10-main\PetShopSpec\bin\Debug\netcoreapp3.1\Microsoft.TestPlatform.PlatformAbstractions.dll
+C:\Users\oliwka\Documents\0 STUDIA\SEMESTR 7\ZTO\Warsztaty 2\wetransfer_zto23_czw10-main_2023-11-16_1057\zto23_czw10-main\PetShopSpec\bin\Debug\netcoreapp3.1\Microsoft.VisualStudio.TestPlatform.ObjectModel.dll
+C:\Users\oliwka\Documents\0 STUDIA\SEMESTR 7\ZTO\Warsztaty 2\wetransfer_zto23_czw10-main_2023-11-16_1057\zto23_czw10-main\PetShopSpec\bin\Debug\netcoreapp3.1\Microsoft.TestPlatform.CommunicationUtilities.dll
+C:\Users\oliwka\Documents\0 STUDIA\SEMESTR 7\ZTO\Warsztaty 2\wetransfer_zto23_czw10-main_2023-11-16_1057\zto23_czw10-main\PetShopSpec\bin\Debug\netcoreapp3.1\Microsoft.TestPlatform.CrossPlatEngine.dll
+C:\Users\oliwka\Documents\0 STUDIA\SEMESTR 7\ZTO\Warsztaty 2\wetransfer_zto23_czw10-main_2023-11-16_1057\zto23_czw10-main\PetShopSpec\bin\Debug\netcoreapp3.1\Microsoft.TestPlatform.Utilities.dll
+C:\Users\oliwka\Documents\0 STUDIA\SEMESTR 7\ZTO\Warsztaty 2\wetransfer_zto23_czw10-main_2023-11-16_1057\zto23_czw10-main\PetShopSpec\bin\Debug\netcoreapp3.1\Microsoft.VisualStudio.TestPlatform.Common.dll
+C:\Users\oliwka\Documents\0 STUDIA\SEMESTR 7\ZTO\Warsztaty 2\wetransfer_zto23_czw10-main_2023-11-16_1057\zto23_czw10-main\PetShopSpec\bin\Debug\netcoreapp3.1\Mono.Cecil.Mdb.dll
+C:\Users\oliwka\Documents\0 STUDIA\SEMESTR 7\ZTO\Warsztaty 2\wetransfer_zto23_czw10-main_2023-11-16_1057\zto23_czw10-main\PetShopSpec\bin\Debug\netcoreapp3.1\Mono.Cecil.Pdb.dll
+C:\Users\oliwka\Documents\0 STUDIA\SEMESTR 7\ZTO\Warsztaty 2\wetransfer_zto23_czw10-main_2023-11-16_1057\zto23_czw10-main\PetShopSpec\bin\Debug\netcoreapp3.1\Mono.Cecil.Rocks.dll
+C:\Users\oliwka\Documents\0 STUDIA\SEMESTR 7\ZTO\Warsztaty 2\wetransfer_zto23_czw10-main_2023-11-16_1057\zto23_czw10-main\PetShopSpec\bin\Debug\netcoreapp3.1\Mono.Cecil.dll
+C:\Users\oliwka\Documents\0 STUDIA\SEMESTR 7\ZTO\Warsztaty 2\wetransfer_zto23_czw10-main_2023-11-16_1057\zto23_czw10-main\PetShopSpec\bin\Debug\netcoreapp3.1\Moq.dll
+C:\Users\oliwka\Documents\0 STUDIA\SEMESTR 7\ZTO\Warsztaty 2\wetransfer_zto23_czw10-main_2023-11-16_1057\zto23_czw10-main\PetShopSpec\bin\Debug\netcoreapp3.1\Moq.AutoMock.dll
+C:\Users\oliwka\Documents\0 STUDIA\SEMESTR 7\ZTO\Warsztaty 2\wetransfer_zto23_czw10-main_2023-11-16_1057\zto23_czw10-main\PetShopSpec\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+C:\Users\oliwka\Documents\0 STUDIA\SEMESTR 7\ZTO\Warsztaty 2\wetransfer_zto23_czw10-main_2023-11-16_1057\zto23_czw10-main\PetShopSpec\bin\Debug\netcoreapp3.1\NuGet.Frameworks.dll
+C:\Users\oliwka\Documents\0 STUDIA\SEMESTR 7\ZTO\Warsztaty 2\wetransfer_zto23_czw10-main_2023-11-16_1057\zto23_czw10-main\PetShopSpec\bin\Debug\netcoreapp3.1\System.Diagnostics.EventLog.dll
+C:\Users\oliwka\Documents\0 STUDIA\SEMESTR 7\ZTO\Warsztaty 2\wetransfer_zto23_czw10-main_2023-11-16_1057\zto23_czw10-main\PetShopSpec\bin\Debug\netcoreapp3.1\cs\Microsoft.TestPlatform.CoreUtilities.resources.dll
+C:\Users\oliwka\Documents\0 STUDIA\SEMESTR 7\ZTO\Warsztaty 2\wetransfer_zto23_czw10-main_2023-11-16_1057\zto23_czw10-main\PetShopSpec\bin\Debug\netcoreapp3.1\cs\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll
+C:\Users\oliwka\Documents\0 STUDIA\SEMESTR 7\ZTO\Warsztaty 2\wetransfer_zto23_czw10-main_2023-11-16_1057\zto23_czw10-main\PetShopSpec\bin\Debug\netcoreapp3.1\de\Microsoft.TestPlatform.CoreUtilities.resources.dll
+C:\Users\oliwka\Documents\0 STUDIA\SEMESTR 7\ZTO\Warsztaty 2\wetransfer_zto23_czw10-main_2023-11-16_1057\zto23_czw10-main\PetShopSpec\bin\Debug\netcoreapp3.1\de\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll
+C:\Users\oliwka\Documents\0 STUDIA\SEMESTR 7\ZTO\Warsztaty 2\wetransfer_zto23_czw10-main_2023-11-16_1057\zto23_czw10-main\PetShopSpec\bin\Debug\netcoreapp3.1\es\Microsoft.TestPlatform.CoreUtilities.resources.dll
+C:\Users\oliwka\Documents\0 STUDIA\SEMESTR 7\ZTO\Warsztaty 2\wetransfer_zto23_czw10-main_2023-11-16_1057\zto23_czw10-main\PetShopSpec\bin\Debug\netcoreapp3.1\es\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll
+C:\Users\oliwka\Documents\0 STUDIA\SEMESTR 7\ZTO\Warsztaty 2\wetransfer_zto23_czw10-main_2023-11-16_1057\zto23_czw10-main\PetShopSpec\bin\Debug\netcoreapp3.1\fr\Microsoft.TestPlatform.CoreUtilities.resources.dll
+C:\Users\oliwka\Documents\0 STUDIA\SEMESTR 7\ZTO\Warsztaty 2\wetransfer_zto23_czw10-main_2023-11-16_1057\zto23_czw10-main\PetShopSpec\bin\Debug\netcoreapp3.1\fr\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll
+C:\Users\oliwka\Documents\0 STUDIA\SEMESTR 7\ZTO\Warsztaty 2\wetransfer_zto23_czw10-main_2023-11-16_1057\zto23_czw10-main\PetShopSpec\bin\Debug\netcoreapp3.1\it\Microsoft.TestPlatform.CoreUtilities.resources.dll
+C:\Users\oliwka\Documents\0 STUDIA\SEMESTR 7\ZTO\Warsztaty 2\wetransfer_zto23_czw10-main_2023-11-16_1057\zto23_czw10-main\PetShopSpec\bin\Debug\netcoreapp3.1\it\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll
+C:\Users\oliwka\Documents\0 STUDIA\SEMESTR 7\ZTO\Warsztaty 2\wetransfer_zto23_czw10-main_2023-11-16_1057\zto23_czw10-main\PetShopSpec\bin\Debug\netcoreapp3.1\ja\Microsoft.TestPlatform.CoreUtilities.resources.dll
+C:\Users\oliwka\Documents\0 STUDIA\SEMESTR 7\ZTO\Warsztaty 2\wetransfer_zto23_czw10-main_2023-11-16_1057\zto23_czw10-main\PetShopSpec\bin\Debug\netcoreapp3.1\ja\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll
+C:\Users\oliwka\Documents\0 STUDIA\SEMESTR 7\ZTO\Warsztaty 2\wetransfer_zto23_czw10-main_2023-11-16_1057\zto23_czw10-main\PetShopSpec\bin\Debug\netcoreapp3.1\ko\Microsoft.TestPlatform.CoreUtilities.resources.dll
+C:\Users\oliwka\Documents\0 STUDIA\SEMESTR 7\ZTO\Warsztaty 2\wetransfer_zto23_czw10-main_2023-11-16_1057\zto23_czw10-main\PetShopSpec\bin\Debug\netcoreapp3.1\ko\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll
+C:\Users\oliwka\Documents\0 STUDIA\SEMESTR 7\ZTO\Warsztaty 2\wetransfer_zto23_czw10-main_2023-11-16_1057\zto23_czw10-main\PetShopSpec\bin\Debug\netcoreapp3.1\pl\Microsoft.TestPlatform.CoreUtilities.resources.dll
+C:\Users\oliwka\Documents\0 STUDIA\SEMESTR 7\ZTO\Warsztaty 2\wetransfer_zto23_czw10-main_2023-11-16_1057\zto23_czw10-main\PetShopSpec\bin\Debug\netcoreapp3.1\pl\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll
+C:\Users\oliwka\Documents\0 STUDIA\SEMESTR 7\ZTO\Warsztaty 2\wetransfer_zto23_czw10-main_2023-11-16_1057\zto23_czw10-main\PetShopSpec\bin\Debug\netcoreapp3.1\pt-BR\Microsoft.TestPlatform.CoreUtilities.resources.dll
+C:\Users\oliwka\Documents\0 STUDIA\SEMESTR 7\ZTO\Warsztaty 2\wetransfer_zto23_czw10-main_2023-11-16_1057\zto23_czw10-main\PetShopSpec\bin\Debug\netcoreapp3.1\pt-BR\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll
+C:\Users\oliwka\Documents\0 STUDIA\SEMESTR 7\ZTO\Warsztaty 2\wetransfer_zto23_czw10-main_2023-11-16_1057\zto23_czw10-main\PetShopSpec\bin\Debug\netcoreapp3.1\ru\Microsoft.TestPlatform.CoreUtilities.resources.dll
+C:\Users\oliwka\Documents\0 STUDIA\SEMESTR 7\ZTO\Warsztaty 2\wetransfer_zto23_czw10-main_2023-11-16_1057\zto23_czw10-main\PetShopSpec\bin\Debug\netcoreapp3.1\ru\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll
+C:\Users\oliwka\Documents\0 STUDIA\SEMESTR 7\ZTO\Warsztaty 2\wetransfer_zto23_czw10-main_2023-11-16_1057\zto23_czw10-main\PetShopSpec\bin\Debug\netcoreapp3.1\tr\Microsoft.TestPlatform.CoreUtilities.resources.dll
+C:\Users\oliwka\Documents\0 STUDIA\SEMESTR 7\ZTO\Warsztaty 2\wetransfer_zto23_czw10-main_2023-11-16_1057\zto23_czw10-main\PetShopSpec\bin\Debug\netcoreapp3.1\tr\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll
+C:\Users\oliwka\Documents\0 STUDIA\SEMESTR 7\ZTO\Warsztaty 2\wetransfer_zto23_czw10-main_2023-11-16_1057\zto23_czw10-main\PetShopSpec\bin\Debug\netcoreapp3.1\zh-Hans\Microsoft.TestPlatform.CoreUtilities.resources.dll
+C:\Users\oliwka\Documents\0 STUDIA\SEMESTR 7\ZTO\Warsztaty 2\wetransfer_zto23_czw10-main_2023-11-16_1057\zto23_czw10-main\PetShopSpec\bin\Debug\netcoreapp3.1\zh-Hans\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll
+C:\Users\oliwka\Documents\0 STUDIA\SEMESTR 7\ZTO\Warsztaty 2\wetransfer_zto23_czw10-main_2023-11-16_1057\zto23_czw10-main\PetShopSpec\bin\Debug\netcoreapp3.1\zh-Hant\Microsoft.TestPlatform.CoreUtilities.resources.dll
+C:\Users\oliwka\Documents\0 STUDIA\SEMESTR 7\ZTO\Warsztaty 2\wetransfer_zto23_czw10-main_2023-11-16_1057\zto23_czw10-main\PetShopSpec\bin\Debug\netcoreapp3.1\zh-Hant\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll
+C:\Users\oliwka\Documents\0 STUDIA\SEMESTR 7\ZTO\Warsztaty 2\wetransfer_zto23_czw10-main_2023-11-16_1057\zto23_czw10-main\PetShopSpec\bin\Debug\netcoreapp3.1\cs\Microsoft.TestPlatform.CommunicationUtilities.resources.dll
+C:\Users\oliwka\Documents\0 STUDIA\SEMESTR 7\ZTO\Warsztaty 2\wetransfer_zto23_czw10-main_2023-11-16_1057\zto23_czw10-main\PetShopSpec\bin\Debug\netcoreapp3.1\cs\Microsoft.TestPlatform.CrossPlatEngine.resources.dll
+C:\Users\oliwka\Documents\0 STUDIA\SEMESTR 7\ZTO\Warsztaty 2\wetransfer_zto23_czw10-main_2023-11-16_1057\zto23_czw10-main\PetShopSpec\bin\Debug\netcoreapp3.1\cs\Microsoft.VisualStudio.TestPlatform.Common.resources.dll
+C:\Users\oliwka\Documents\0 STUDIA\SEMESTR 7\ZTO\Warsztaty 2\wetransfer_zto23_czw10-main_2023-11-16_1057\zto23_czw10-main\PetShopSpec\bin\Debug\netcoreapp3.1\de\Microsoft.TestPlatform.CommunicationUtilities.resources.dll
+C:\Users\oliwka\Documents\0 STUDIA\SEMESTR 7\ZTO\Warsztaty 2\wetransfer_zto23_czw10-main_2023-11-16_1057\zto23_czw10-main\PetShopSpec\bin\Debug\netcoreapp3.1\de\Microsoft.TestPlatform.CrossPlatEngine.resources.dll
+C:\Users\oliwka\Documents\0 STUDIA\SEMESTR 7\ZTO\Warsztaty 2\wetransfer_zto23_czw10-main_2023-11-16_1057\zto23_czw10-main\PetShopSpec\bin\Debug\netcoreapp3.1\de\Microsoft.VisualStudio.TestPlatform.Common.resources.dll
+C:\Users\oliwka\Documents\0 STUDIA\SEMESTR 7\ZTO\Warsztaty 2\wetransfer_zto23_czw10-main_2023-11-16_1057\zto23_czw10-main\PetShopSpec\bin\Debug\netcoreapp3.1\es\Microsoft.TestPlatform.CommunicationUtilities.resources.dll
+C:\Users\oliwka\Documents\0 STUDIA\SEMESTR 7\ZTO\Warsztaty 2\wetransfer_zto23_czw10-main_2023-11-16_1057\zto23_czw10-main\PetShopSpec\bin\Debug\netcoreapp3.1\es\Microsoft.TestPlatform.CrossPlatEngine.resources.dll
+C:\Users\oliwka\Documents\0 STUDIA\SEMESTR 7\ZTO\Warsztaty 2\wetransfer_zto23_czw10-main_2023-11-16_1057\zto23_czw10-main\PetShopSpec\bin\Debug\netcoreapp3.1\es\Microsoft.VisualStudio.TestPlatform.Common.resources.dll
+C:\Users\oliwka\Documents\0 STUDIA\SEMESTR 7\ZTO\Warsztaty 2\wetransfer_zto23_czw10-main_2023-11-16_1057\zto23_czw10-main\PetShopSpec\bin\Debug\netcoreapp3.1\fr\Microsoft.TestPlatform.CommunicationUtilities.resources.dll
+C:\Users\oliwka\Documents\0 STUDIA\SEMESTR 7\ZTO\Warsztaty 2\wetransfer_zto23_czw10-main_2023-11-16_1057\zto23_czw10-main\PetShopSpec\bin\Debug\netcoreapp3.1\fr\Microsoft.TestPlatform.CrossPlatEngine.resources.dll
+C:\Users\oliwka\Documents\0 STUDIA\SEMESTR 7\ZTO\Warsztaty 2\wetransfer_zto23_czw10-main_2023-11-16_1057\zto23_czw10-main\PetShopSpec\bin\Debug\netcoreapp3.1\fr\Microsoft.VisualStudio.TestPlatform.Common.resources.dll
+C:\Users\oliwka\Documents\0 STUDIA\SEMESTR 7\ZTO\Warsztaty 2\wetransfer_zto23_czw10-main_2023-11-16_1057\zto23_czw10-main\PetShopSpec\bin\Debug\netcoreapp3.1\it\Microsoft.TestPlatform.CommunicationUtilities.resources.dll
+C:\Users\oliwka\Documents\0 STUDIA\SEMESTR 7\ZTO\Warsztaty 2\wetransfer_zto23_czw10-main_2023-11-16_1057\zto23_czw10-main\PetShopSpec\bin\Debug\netcoreapp3.1\it\Microsoft.TestPlatform.CrossPlatEngine.resources.dll
+C:\Users\oliwka\Documents\0 STUDIA\SEMESTR 7\ZTO\Warsztaty 2\wetransfer_zto23_czw10-main_2023-11-16_1057\zto23_czw10-main\PetShopSpec\bin\Debug\netcoreapp3.1\it\Microsoft.VisualStudio.TestPlatform.Common.resources.dll
+C:\Users\oliwka\Documents\0 STUDIA\SEMESTR 7\ZTO\Warsztaty 2\wetransfer_zto23_czw10-main_2023-11-16_1057\zto23_czw10-main\PetShopSpec\bin\Debug\netcoreapp3.1\ja\Microsoft.TestPlatform.CommunicationUtilities.resources.dll
+C:\Users\oliwka\Documents\0 STUDIA\SEMESTR 7\ZTO\Warsztaty 2\wetransfer_zto23_czw10-main_2023-11-16_1057\zto23_czw10-main\PetShopSpec\bin\Debug\netcoreapp3.1\ja\Microsoft.TestPlatform.CrossPlatEngine.resources.dll
+C:\Users\oliwka\Documents\0 STUDIA\SEMESTR 7\ZTO\Warsztaty 2\wetransfer_zto23_czw10-main_2023-11-16_1057\zto23_czw10-main\PetShopSpec\bin\Debug\netcoreapp3.1\ja\Microsoft.VisualStudio.TestPlatform.Common.resources.dll
+C:\Users\oliwka\Documents\0 STUDIA\SEMESTR 7\ZTO\Warsztaty 2\wetransfer_zto23_czw10-main_2023-11-16_1057\zto23_czw10-main\PetShopSpec\bin\Debug\netcoreapp3.1\ko\Microsoft.TestPlatform.CommunicationUtilities.resources.dll
+C:\Users\oliwka\Documents\0 STUDIA\SEMESTR 7\ZTO\Warsztaty 2\wetransfer_zto23_czw10-main_2023-11-16_1057\zto23_czw10-main\PetShopSpec\bin\Debug\netcoreapp3.1\ko\Microsoft.TestPlatform.CrossPlatEngine.resources.dll
+C:\Users\oliwka\Documents\0 STUDIA\SEMESTR 7\ZTO\Warsztaty 2\wetransfer_zto23_czw10-main_2023-11-16_1057\zto23_czw10-main\PetShopSpec\bin\Debug\netcoreapp3.1\ko\Microsoft.VisualStudio.TestPlatform.Common.resources.dll
+C:\Users\oliwka\Documents\0 STUDIA\SEMESTR 7\ZTO\Warsztaty 2\wetransfer_zto23_czw10-main_2023-11-16_1057\zto23_czw10-main\PetShopSpec\bin\Debug\netcoreapp3.1\pl\Microsoft.TestPlatform.CommunicationUtilities.resources.dll
+C:\Users\oliwka\Documents\0 STUDIA\SEMESTR 7\ZTO\Warsztaty 2\wetransfer_zto23_czw10-main_2023-11-16_1057\zto23_czw10-main\PetShopSpec\bin\Debug\netcoreapp3.1\pl\Microsoft.TestPlatform.CrossPlatEngine.resources.dll
+C:\Users\oliwka\Documents\0 STUDIA\SEMESTR 7\ZTO\Warsztaty 2\wetransfer_zto23_czw10-main_2023-11-16_1057\zto23_czw10-main\PetShopSpec\bin\Debug\netcoreapp3.1\pl\Microsoft.VisualStudio.TestPlatform.Common.resources.dll
+C:\Users\oliwka\Documents\0 STUDIA\SEMESTR 7\ZTO\Warsztaty 2\wetransfer_zto23_czw10-main_2023-11-16_1057\zto23_czw10-main\PetShopSpec\bin\Debug\netcoreapp3.1\pt-BR\Microsoft.TestPlatform.CommunicationUtilities.resources.dll
+C:\Users\oliwka\Documents\0 STUDIA\SEMESTR 7\ZTO\Warsztaty 2\wetransfer_zto23_czw10-main_2023-11-16_1057\zto23_czw10-main\PetShopSpec\bin\Debug\netcoreapp3.1\pt-BR\Microsoft.TestPlatform.CrossPlatEngine.resources.dll
+C:\Users\oliwka\Documents\0 STUDIA\SEMESTR 7\ZTO\Warsztaty 2\wetransfer_zto23_czw10-main_2023-11-16_1057\zto23_czw10-main\PetShopSpec\bin\Debug\netcoreapp3.1\pt-BR\Microsoft.VisualStudio.TestPlatform.Common.resources.dll
+C:\Users\oliwka\Documents\0 STUDIA\SEMESTR 7\ZTO\Warsztaty 2\wetransfer_zto23_czw10-main_2023-11-16_1057\zto23_czw10-main\PetShopSpec\bin\Debug\netcoreapp3.1\ru\Microsoft.TestPlatform.CommunicationUtilities.resources.dll
+C:\Users\oliwka\Documents\0 STUDIA\SEMESTR 7\ZTO\Warsztaty 2\wetransfer_zto23_czw10-main_2023-11-16_1057\zto23_czw10-main\PetShopSpec\bin\Debug\netcoreapp3.1\ru\Microsoft.TestPlatform.CrossPlatEngine.resources.dll
+C:\Users\oliwka\Documents\0 STUDIA\SEMESTR 7\ZTO\Warsztaty 2\wetransfer_zto23_czw10-main_2023-11-16_1057\zto23_czw10-main\PetShopSpec\bin\Debug\netcoreapp3.1\ru\Microsoft.VisualStudio.TestPlatform.Common.resources.dll
+C:\Users\oliwka\Documents\0 STUDIA\SEMESTR 7\ZTO\Warsztaty 2\wetransfer_zto23_czw10-main_2023-11-16_1057\zto23_czw10-main\PetShopSpec\bin\Debug\netcoreapp3.1\tr\Microsoft.TestPlatform.CommunicationUtilities.resources.dll
+C:\Users\oliwka\Documents\0 STUDIA\SEMESTR 7\ZTO\Warsztaty 2\wetransfer_zto23_czw10-main_2023-11-16_1057\zto23_czw10-main\PetShopSpec\bin\Debug\netcoreapp3.1\tr\Microsoft.TestPlatform.CrossPlatEngine.resources.dll
+C:\Users\oliwka\Documents\0 STUDIA\SEMESTR 7\ZTO\Warsztaty 2\wetransfer_zto23_czw10-main_2023-11-16_1057\zto23_czw10-main\PetShopSpec\bin\Debug\netcoreapp3.1\tr\Microsoft.VisualStudio.TestPlatform.Common.resources.dll
+C:\Users\oliwka\Documents\0 STUDIA\SEMESTR 7\ZTO\Warsztaty 2\wetransfer_zto23_czw10-main_2023-11-16_1057\zto23_czw10-main\PetShopSpec\bin\Debug\netcoreapp3.1\zh-Hans\Microsoft.TestPlatform.CommunicationUtilities.resources.dll
+C:\Users\oliwka\Documents\0 STUDIA\SEMESTR 7\ZTO\Warsztaty 2\wetransfer_zto23_czw10-main_2023-11-16_1057\zto23_czw10-main\PetShopSpec\bin\Debug\netcoreapp3.1\zh-Hans\Microsoft.TestPlatform.CrossPlatEngine.resources.dll
+C:\Users\oliwka\Documents\0 STUDIA\SEMESTR 7\ZTO\Warsztaty 2\wetransfer_zto23_czw10-main_2023-11-16_1057\zto23_czw10-main\PetShopSpec\bin\Debug\netcoreapp3.1\zh-Hans\Microsoft.VisualStudio.TestPlatform.Common.resources.dll
+C:\Users\oliwka\Documents\0 STUDIA\SEMESTR 7\ZTO\Warsztaty 2\wetransfer_zto23_czw10-main_2023-11-16_1057\zto23_czw10-main\PetShopSpec\bin\Debug\netcoreapp3.1\zh-Hant\Microsoft.TestPlatform.CommunicationUtilities.resources.dll
+C:\Users\oliwka\Documents\0 STUDIA\SEMESTR 7\ZTO\Warsztaty 2\wetransfer_zto23_czw10-main_2023-11-16_1057\zto23_czw10-main\PetShopSpec\bin\Debug\netcoreapp3.1\zh-Hant\Microsoft.TestPlatform.CrossPlatEngine.resources.dll
+C:\Users\oliwka\Documents\0 STUDIA\SEMESTR 7\ZTO\Warsztaty 2\wetransfer_zto23_czw10-main_2023-11-16_1057\zto23_czw10-main\PetShopSpec\bin\Debug\netcoreapp3.1\zh-Hant\Microsoft.VisualStudio.TestPlatform.Common.resources.dll
+C:\Users\oliwka\Documents\0 STUDIA\SEMESTR 7\ZTO\Warsztaty 2\wetransfer_zto23_czw10-main_2023-11-16_1057\zto23_czw10-main\PetShopSpec\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.0\System.Diagnostics.EventLog.dll
+C:\Users\oliwka\Documents\0 STUDIA\SEMESTR 7\ZTO\Warsztaty 2\wetransfer_zto23_czw10-main_2023-11-16_1057\zto23_czw10-main\PetShopSpec\bin\Debug\netcoreapp3.1\PetShop.dll
+C:\Users\oliwka\Documents\0 STUDIA\SEMESTR 7\ZTO\Warsztaty 2\wetransfer_zto23_czw10-main_2023-11-16_1057\zto23_czw10-main\PetShopSpec\bin\Debug\netcoreapp3.1\PetShop.pdb
+C:\Users\oliwka\Documents\0 STUDIA\SEMESTR 7\ZTO\Warsztaty 2\wetransfer_zto23_czw10-main_2023-11-16_1057\zto23_czw10-main\PetShopSpec\obj\Debug\netcoreapp3.1\PetShopSpec.csproj.AssemblyReference.cache
+C:\Users\oliwka\Documents\0 STUDIA\SEMESTR 7\ZTO\Warsztaty 2\wetransfer_zto23_czw10-main_2023-11-16_1057\zto23_czw10-main\PetShopSpec\obj\Debug\netcoreapp3.1\PetShopSpec.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\oliwka\Documents\0 STUDIA\SEMESTR 7\ZTO\Warsztaty 2\wetransfer_zto23_czw10-main_2023-11-16_1057\zto23_czw10-main\PetShopSpec\obj\Debug\netcoreapp3.1\PetShopSpec.AssemblyInfoInputs.cache
+C:\Users\oliwka\Documents\0 STUDIA\SEMESTR 7\ZTO\Warsztaty 2\wetransfer_zto23_czw10-main_2023-11-16_1057\zto23_czw10-main\PetShopSpec\obj\Debug\netcoreapp3.1\PetShopSpec.AssemblyInfo.cs
+C:\Users\oliwka\Documents\0 STUDIA\SEMESTR 7\ZTO\Warsztaty 2\wetransfer_zto23_czw10-main_2023-11-16_1057\zto23_czw10-main\PetShopSpec\obj\Debug\netcoreapp3.1\PetShopSpec.csproj.CoreCompileInputs.cache
+C:\Users\oliwka\Documents\0 STUDIA\SEMESTR 7\ZTO\Warsztaty 2\wetransfer_zto23_czw10-main_2023-11-16_1057\zto23_czw10-main\PetShopSpec\obj\Debug\netcoreapp3.1\PetShopSpec.csproj.CopyComplete
+C:\Users\oliwka\Documents\0 STUDIA\SEMESTR 7\ZTO\Warsztaty 2\wetransfer_zto23_czw10-main_2023-11-16_1057\zto23_czw10-main\PetShopSpec\obj\Debug\netcoreapp3.1\PetShopSpec.dll
+C:\Users\oliwka\Documents\0 STUDIA\SEMESTR 7\ZTO\Warsztaty 2\wetransfer_zto23_czw10-main_2023-11-16_1057\zto23_czw10-main\PetShopSpec\obj\Debug\netcoreapp3.1\PetShopSpec.pdb
+C:\Users\oliwka\Documents\0 STUDIA\SEMESTR 7\ZTO\Warsztaty 2\wetransfer_zto23_czw10-main_2023-11-16_1057\zto23_czw10-main\PetShopSpec\obj\Debug\netcoreapp3.1\PetShopSpec.genruntimeconfig.cache

@@ -1,0 +1,148 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\oliwka\\Documents\\0 STUDIA\\SEMESTR 7\\ZTO\\Warsztaty 2\\wetransfer_zto23_czw10-main_2023-11-16_1057\\zto23_czw10-main\\PetShopSpec\\PetShopSpec.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\oliwka\\Documents\\0 STUDIA\\SEMESTR 7\\ZTO\\Warsztaty 2\\wetransfer_zto23_czw10-main_2023-11-16_1057\\zto23_czw10-main\\PetShopSpec\\PetShopSpec.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\oliwka\\Documents\\0 STUDIA\\SEMESTR 7\\ZTO\\Warsztaty 2\\wetransfer_zto23_czw10-main_2023-11-16_1057\\zto23_czw10-main\\PetShopSpec\\PetShopSpec.csproj",
+        "projectName": "PetShopSpec",
+        "projectPath": "C:\\Users\\oliwka\\Documents\\0 STUDIA\\SEMESTR 7\\ZTO\\Warsztaty 2\\wetransfer_zto23_czw10-main_2023-11-16_1057\\zto23_czw10-main\\PetShopSpec\\PetShopSpec.csproj",
+        "packagesPath": "C:\\Users\\oliwka\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\oliwka\\Documents\\0 STUDIA\\SEMESTR 7\\ZTO\\Warsztaty 2\\wetransfer_zto23_czw10-main_2023-11-16_1057\\zto23_czw10-main\\PetShopSpec\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\oliwka\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {
+              "C:\\Users\\oliwka\\Documents\\0 STUDIA\\SEMESTR 7\\ZTO\\Warsztaty 2\\wetransfer_zto23_czw10-main_2023-11-16_1057\\zto23_czw10-main\\PetShop\\PetShop.csproj": {
+                "projectPath": "C:\\Users\\oliwka\\Documents\\0 STUDIA\\SEMESTR 7\\ZTO\\Warsztaty 2\\wetransfer_zto23_czw10-main_2023-11-16_1057\\zto23_czw10-main\\PetShop\\PetShop.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "dependencies": {
+            "Machine.Specifications": {
+              "target": "Package",
+              "version": "[1.1.0, )"
+            },
+            "Machine.Specifications.Runner.VisualStudio": {
+              "target": "Package",
+              "version": "[2.10.2, )"
+            },
+            "Machine.Specifications.Should": {
+              "target": "Package",
+              "version": "[1.0.0, )"
+            },
+            "Microsoft.NET.Test.Sdk": {
+              "target": "Package",
+              "version": "[17.3.2, )"
+            },
+            "Moq": {
+              "target": "Package",
+              "version": "[4.18.2, )"
+            },
+            "Moq.AutoMock": {
+              "target": "Package",
+              "version": "[3.4.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.402\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\oliwka\\Documents\\0 STUDIA\\SEMESTR 7\\ZTO\\Warsztaty 2\\wetransfer_zto23_czw10-main_2023-11-16_1057\\zto23_czw10-main\\PetShop\\PetShop.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\oliwka\\Documents\\0 STUDIA\\SEMESTR 7\\ZTO\\Warsztaty 2\\wetransfer_zto23_czw10-main_2023-11-16_1057\\zto23_czw10-main\\PetShop\\PetShop.csproj",
+        "projectName": "PetShop",
+        "projectPath": "C:\\Users\\oliwka\\Documents\\0 STUDIA\\SEMESTR 7\\ZTO\\Warsztaty 2\\wetransfer_zto23_czw10-main_2023-11-16_1057\\zto23_czw10-main\\PetShop\\PetShop.csproj",
+        "packagesPath": "C:\\Users\\oliwka\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\oliwka\\Documents\\0 STUDIA\\SEMESTR 7\\ZTO\\Warsztaty 2\\wetransfer_zto23_czw10-main_2023-11-16_1057\\zto23_czw10-main\\PetShop\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\oliwka\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.402\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

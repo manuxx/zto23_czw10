@@ -1,0 +1,19 @@
+D:\184918\zto23_czw10-main\PetShop\bin\Debug\netcoreapp3.1\PetShop.deps.json
+D:\184918\zto23_czw10-main\PetShop\bin\Debug\netcoreapp3.1\PetShop.dll
+D:\184918\zto23_czw10-main\PetShop\bin\Debug\netcoreapp3.1\PetShop.pdb
+D:\184918\zto23_czw10-main\PetShop\obj\Debug\netcoreapp3.1\PetShop.csproj.AssemblyReference.cache
+D:\184918\zto23_czw10-main\PetShop\obj\Debug\netcoreapp3.1\PetShop.GeneratedMSBuildEditorConfig.editorconfig
+D:\184918\zto23_czw10-main\PetShop\obj\Debug\netcoreapp3.1\PetShop.AssemblyInfoInputs.cache
+D:\184918\zto23_czw10-main\PetShop\obj\Debug\netcoreapp3.1\PetShop.AssemblyInfo.cs
+D:\184918\zto23_czw10-main\PetShop\obj\Debug\netcoreapp3.1\PetShop.csproj.CoreCompileInputs.cache
+D:\184918\zto23_czw10-main\PetShop\obj\Debug\netcoreapp3.1\PetShop.dll
+D:\184918\zto23_czw10-main\PetShop\obj\Debug\netcoreapp3.1\PetShop.pdb
+C:\Users\oliwka\Documents\0 STUDIA\SEMESTR 7\ZTO\Warsztaty 2\wetransfer_zto23_czw10-main_2023-11-16_1057\zto23_czw10-main\PetShop\bin\Debug\netcoreapp3.1\PetShop.deps.json
+C:\Users\oliwka\Documents\0 STUDIA\SEMESTR 7\ZTO\Warsztaty 2\wetransfer_zto23_czw10-main_2023-11-16_1057\zto23_czw10-main\PetShop\bin\Debug\netcoreapp3.1\PetShop.dll
+C:\Users\oliwka\Documents\0 STUDIA\SEMESTR 7\ZTO\Warsztaty 2\wetransfer_zto23_czw10-main_2023-11-16_1057\zto23_czw10-main\PetShop\bin\Debug\netcoreapp3.1\PetShop.pdb
+C:\Users\oliwka\Documents\0 STUDIA\SEMESTR 7\ZTO\Warsztaty 2\wetransfer_zto23_czw10-main_2023-11-16_1057\zto23_czw10-main\PetShop\obj\Debug\netcoreapp3.1\PetShop.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\oliwka\Documents\0 STUDIA\SEMESTR 7\ZTO\Warsztaty 2\wetransfer_zto23_czw10-main_2023-11-16_1057\zto23_czw10-main\PetShop\obj\Debug\netcoreapp3.1\PetShop.AssemblyInfoInputs.cache
+C:\Users\oliwka\Documents\0 STUDIA\SEMESTR 7\ZTO\Warsztaty 2\wetransfer_zto23_czw10-main_2023-11-16_1057\zto23_czw10-main\PetShop\obj\Debug\netcoreapp3.1\PetShop.AssemblyInfo.cs
+C:\Users\oliwka\Documents\0 STUDIA\SEMESTR 7\ZTO\Warsztaty 2\wetransfer_zto23_czw10-main_2023-11-16_1057\zto23_czw10-main\PetShop\obj\Debug\netcoreapp3.1\PetShop.csproj.CoreCompileInputs.cache
+C:\Users\oliwka\Documents\0 STUDIA\SEMESTR 7\ZTO\Warsztaty 2\wetransfer_zto23_czw10-main_2023-11-16_1057\zto23_czw10-main\PetShop\obj\Debug\netcoreapp3.1\PetShop.dll
+C:\Users\oliwka\Documents\0 STUDIA\SEMESTR 7\ZTO\Warsztaty 2\wetransfer_zto23_czw10-main_2023-11-16_1057\zto23_czw10-main\PetShop\obj\Debug\netcoreapp3.1\PetShop.pdb
