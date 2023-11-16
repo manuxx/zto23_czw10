@@ -1,7 +1,6 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using System.Linq;
 
 namespace Training.DomainClasses
 {
@@ -11,7 +10,7 @@ namespace Training.DomainClasses
 
         public PetShop(IList<Pet> petsInTheStore)
         {
-            _petsInTheStore = petsInTheStore;
+            this._petsInTheStore = petsInTheStore;
         }
 
         public IEnumerable<Pet> AllPets()
@@ -39,21 +38,16 @@ namespace Training.DomainClasses
         {
             foreach (var pet in _petsInTheStore)
             {
-                if (pet.species.Equals(Species.Cat))
-                {
+                if (pet.species == Species.Cat)
                     yield return pet;
-                }
             }
         }
 
         public IEnumerable<Pet> AllPetsSortedByName()
         {
-            List<Pet> pets = new List<Pet>(_petsInTheStore);
-            pets.Sort((p1, p2) => p1.name.CompareTo(p2.name));
-            foreach (var pet in pets)
-            {
-                yield return pet;
-            }
+            var ret = new List<Pet>(_petsInTheStore);
+            ret.Sort((p1,p2)=>p1.name.CompareTo(p2.name));
+            return ret;
         }
     }
 
