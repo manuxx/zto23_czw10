@@ -113,7 +113,6 @@ namespace Training.Specificaton
         private static Exception exception;
         It invalid_cast_exception_should_be_thrown = () => exception.ShouldBeOfExactType<InvalidCastException>();
     }
-
     public class concern_with_pets_for_sorting_and_filtering : pet_shop_concern
     {
         private Establish c = () =>
@@ -223,5 +222,6 @@ namespace Training.Specificaton
                 dog_Pluto, cat_Tom);
         };
     };
+
 
 }
