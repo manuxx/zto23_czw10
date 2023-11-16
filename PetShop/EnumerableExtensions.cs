@@ -1,12 +1,12 @@
 using System.Collections.Generic;
-
-namespace Training.DomainClasses;
+using Training.DomainClasses;
 
 public static class EnumerableExtensions
 {
-    public static IEnumerable<T> OneAtATime<T>(this IEnumerable<T> collection)
+
+    public static IEnumerable<TItem> OneAtATime<TItem>(this IEnumerable<TItem> items)
     {
-        foreach (var item in collection)
+        foreach (var item in items)
         {
             yield return item;
         }
