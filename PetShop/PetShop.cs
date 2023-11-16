@@ -52,6 +52,46 @@ namespace Training.DomainClasses
                 yield return pet;
             }
         }
+
+        public IEnumerable<Pet> AllMice()
+        {
+            throw new NotImplementedException();
+        }
+
+        public IEnumerable<Pet> AllFemalePets()
+        {
+            throw new NotImplementedException();
+        }
+
+        public IEnumerable<Pet> AllCatsOrDogs()
+        {
+            throw new NotImplementedException();
+        }
+
+        public IEnumerable<Pet> AllPetsButNotMice()
+        {
+            throw new NotImplementedException();
+        }
+
+        public IEnumerable<Pet> AllPetsBornAfter2010()
+        {
+            throw new NotImplementedException();
+        }
+
+        public IEnumerable<Pet> AllDogsBornAfter2010()
+        {
+            throw new NotImplementedException();
+        }
+
+        public IEnumerable<Pet> AllMaleDogs()
+        {
+            throw new NotImplementedException();
+        }
+
+        public IEnumerable<Pet> AllPetsBornAfter2011OrRabbits()
+        {
+            throw new NotImplementedException();
+        }
     }
 
     public class ReadOnly : IEnumerable<Pet>
