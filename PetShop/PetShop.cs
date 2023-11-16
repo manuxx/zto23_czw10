@@ -1,6 +1,5 @@
 using System;
 using System.Collections.Generic;
-using System.Linq;
 
 namespace Training.DomainClasses
 {
@@ -15,7 +14,7 @@ namespace Training.DomainClasses
 
         public IEnumerable<Pet> AllPets()
         {
-            foreach (Pet pet in _petsInTheStore)
+            foreach (var pet in _petsInTheStore)
             {
                 yield return pet;
             }
@@ -23,10 +22,17 @@ namespace Training.DomainClasses
 
         public void Add(Pet newPet)
         {
-             foreach (var pet in _petsInTheStore)
-                if (newPet.name==pet.name)
-                    return;
-             _petsInTheStore.Add(newPet);
+            if (!_petsInTheStore.Contains(newPet))
+            {
+                foreach (var pet in _petsInTheStore)
+                {
+                    if (pet.name == newPet.name)
+                    {
+                        return;
+                    }
+                }
+                _petsInTheStore.Add(newPet);
+            }
 
         }
     }
