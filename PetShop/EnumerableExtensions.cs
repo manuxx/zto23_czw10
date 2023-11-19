@@ -12,10 +12,6 @@ public static class EnumerableExtensions
             yield return item;
         }
     }
-    public static bool ShouldContainOnly<TItem>(this IEnumerable<TItem> items, params TItem[] elements)
-    {
-        return false;
-    }
 
     public static IEnumerable<TItem> Filter<TItem>(this IEnumerable<TItem> items, Predicate<TItem> predicate)
     {

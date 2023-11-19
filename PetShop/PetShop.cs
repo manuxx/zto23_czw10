@@ -77,7 +77,7 @@ namespace Training.DomainClasses
 
         public IEnumerable<Pet> AllPetsBornAfter2011OrRabbits()
         {
-            return _petsInTheStore.Filter(pet => pet.yearOfBirth > 2010 || pet.species == Species.Rabbit);
+            return _petsInTheStore.Filter(pet => pet.yearOfBirth > 2011 || pet.species == Species.Rabbit);
         }
         
     }
