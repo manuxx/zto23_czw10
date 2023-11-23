@@ -13,7 +13,7 @@ public static class EnumerableExtensions
         }
     }
     
-    public static IEnumerable<T> ThatSatisfy<T>(IEnumerable<T> collection, Predicate<T> condition)
+    public static IEnumerable<T> ThatSatisfy<T>(this IEnumerable<T> collection, Predicate<T> condition)
     {
         foreach (var item in collection)
         {
