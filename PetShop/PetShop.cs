@@ -42,15 +42,15 @@ namespace Training.DomainClasses
 
         public IEnumerable<Pet> AllCats()
         {
-            return _petsInTheStore.ThatSatisfy(IsASpecieOf(Species.Cat));
+            return _petsInTheStore.ThatSatisfy(Pet.IsASpecieOf(Species.Cat));
         }
         public IEnumerable<Pet> AllMice()
         {
-            return _petsInTheStore.ThatSatisfy(IsASpecieOf(Species.Mouse));
+            return _petsInTheStore.ThatSatisfy(Pet.IsASpecieOf(Species.Mouse));
         }
         public IEnumerable<Pet> AllFemalePets()
         {
-            return _petsInTheStore.ThatSatisfy(IsFemale());
+            return _petsInTheStore.ThatSatisfy(Pet.IsFemale());
         }
 
         public IEnumerable<Pet> AllCatsOrDogs()
@@ -60,12 +60,12 @@ namespace Training.DomainClasses
 
         public IEnumerable<Pet> AllPetsButNotMice()
         {
-            return _petsInTheStore.ThatSatisfy(IsNotASpecieOf(Species.Mouse));
+            return _petsInTheStore.ThatSatisfy(Pet.IsNotASpecieOf(Species.Mouse));
         }
 
         public IEnumerable<Pet> AllPetsBornAfter2010()
         {
-            return _petsInTheStore.ThatSatisfy(IsBornAfter(2010));
+            return _petsInTheStore.ThatSatisfy(Pet.IsBornAfter(2010));
         }
 
         public IEnumerable<Pet> AllDogsBornAfter2010()
@@ -83,25 +83,7 @@ namespace Training.DomainClasses
             return _petsInTheStore.ThatSatisfy(pet => pet.species == Species.Rabbit || pet.yearOfBirth > 2011);
         }
         
-        private static Predicate<Pet> IsASpecieOf(Species specie)
-        {
-            return pet => pet.species == specie;
-        }
         
-        private static Predicate<Pet> IsNotASpecieOf(Species specie)
-        {
-            return pet => pet.species != specie;
-        }
-
-        private static Predicate<Pet> IsBornAfter(int year)
-        {
-            return pet => pet.yearOfBirth > year;
-        }
-        
-        private static Predicate<Pet> IsFemale()
-        {
-            return pet => pet.sex == Sex.Female;
-        }
     }
 
     public class ReadOnly : IEnumerable<Pet>
