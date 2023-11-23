@@ -21,4 +21,18 @@ public static class EnumerableExtensions
                 yield return item;
         }
     }
+
+    public static IEnumerable<TItem> ThatMatch<TItem>(this IList<TItem> items, Criteria<TItem> criteria)
+    {
+        foreach (var item in items)
+        {
+            if (criteria.isSatisfiedBy(item))
+                yield return item;
+        }
+    }
+}
+
+public interface Criteria<T>
+{
+    bool isSatisfiedBy(T item);
 }

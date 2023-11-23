@@ -55,9 +55,23 @@ namespace Training.DomainClasses
             return pet => pet.species != specie;
         }
 
-        public static Predicate<Pet> IsBornAfter(int year)
+        public static Criteria<Pet> IsBornAfter(int year)
         {
-            return (pet => pet.yearOfBirth > year);
+            return new BornCriteria(year);
+        }
+    }
+
+    public class BornCriteria : Criteria<Pet>
+    {
+        private int _year;
+        public BornCriteria(int year)
+        {
+            this._year = year;
+        }
+
+        public bool isSatisfiedBy(Pet item)
+        {
+            return item.yearOfBirth > 2010;
         }
     }
 }
