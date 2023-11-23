@@ -37,30 +37,30 @@ namespace Training.Specificaton
     {
         Establish context = () =>
         {
-            first_pet = new Pet();
-            second_pet = new Pet();
-            pet_initial_content.AddManyItems(first_pet, second_pet);
+            _firstItem = new Pet();
+            _secondItem = new Pet();
+            pet_initial_content.AddManyItems(_firstItem, _secondItem);
         };
 
         Because of = () => pets_in_shop = subject.AllPets();
 
         It should_return_all_the_pets_in_the_shop = () =>
-            pet_initial_content.ShouldContainOnly(first_pet, second_pet);
+            pet_initial_content.ShouldContainOnly(_firstItem, _secondItem);
 
-        static Pet first_pet;
-        static Pet second_pet;
+        static Pet _firstItem;
+        static Pet _secondItem;
         static IEnumerable<Pet> pets_in_shop;
     }
 
     public class when_adding_a_new_pet : pet_shop_concern
     {
-        Establish context = () => pet = new Pet();
-        Because of = () => subject.Add(pet);
+        Establish context = () => _item = new Pet();
+        Because of = () => subject.Add(_item);
 
         It should_store_a_new_pet_in_the_shop = () =>
-            subject.AllPets().ShouldContain(pet);
+            subject.AllPets().ShouldContain(_item);
 
-        static Pet pet;
+        static Pet _item;
     }
 
 
@@ -68,17 +68,17 @@ namespace Training.Specificaton
     {
         Establish context = () =>
         {
-            pet = new Pet();
-            pet_initial_content.Add(pet);
+            _item = new Pet();
+            pet_initial_content.Add(_item);
         };
 
         Because of = () =>
-            subject.Add(pet);
+            subject.Add(_item);
 
         It should_store_a_pet_in_the_shop_once = () =>
             subject.AllPets().CountItems().ShouldEqual(1);
 
-        private static Pet pet;
+        private static Pet _item;
     }
 
 
