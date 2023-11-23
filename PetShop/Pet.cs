@@ -52,7 +52,7 @@ namespace Training.DomainClasses
 
         public static Predicate<Pet> IsNotSpeciesOf(Species species)
         {
-	        return pet => pet.species != Species.Mouse;
+	        return pet => pet.species != species;
         }
 
         public static Criteria<Pet> IsBornAfter(int year)
