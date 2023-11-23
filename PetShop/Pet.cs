@@ -40,24 +40,69 @@ namespace Training.DomainClasses
         public float price { get; set; }
         public Species species { get; set; }
 
-        public static Predicate<Pet> IsSpecies(Species species)
+        public static ICriteria<Pet> IsSpecies(Species species)
         {
-            return pet => pet.species == species;
+            return new IsSpeciesCriteria(species);
         }
 
-        public static Predicate<Pet> IsSex(Sex sex)
+        public static ICriteria<Pet> IsSex(Sex sex)
         {
-            return pet => pet.sex == sex;
+            return new IsSexCriteria(sex);
         }
 
-        public static Predicate<Pet> IsNotSpecies(Species species)
+        public static ICriteria<Pet> IsNotSpecies(Species species)
         {
-            return pet => pet.species != species;
+            return new IsNotSpeciesCriteria(species);
         }
 
         public static ICriteria<Pet> IsBornAfter(int year)
         {
             return new BornAfterCriteria(year);
+        }
+    }
+
+    public class IsNotSpeciesCriteria : ICriteria<Pet>
+    {
+        private readonly Species _species;
+
+        public IsNotSpeciesCriteria(Species species)
+        {
+            _species = species;
+        }
+
+        public bool IsSatisfiedBy(Pet item)
+        {
+            return item.species != _species;
+        }
+    }
+
+    public class IsSexCriteria : ICriteria<Pet>
+    {
+        private readonly Sex _sex;
+
+        public IsSexCriteria(Sex sex)
+        {
+            _sex = sex;
+        }
+
+        public bool IsSatisfiedBy(Pet item)
+        {
+            return item.sex == _sex;
+        }
+    }
+
+    public class IsSpeciesCriteria : ICriteria<Pet>
+    {
+        private readonly Species _species;
+
+        public IsSpeciesCriteria(Species species)
+        {
+            _species = species;
+        }
+
+        public bool IsSatisfiedBy(Pet item)
+        {
+            return item.species == _species;
         }
     }
 
