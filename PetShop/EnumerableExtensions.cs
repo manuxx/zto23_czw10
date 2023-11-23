@@ -16,11 +16,7 @@ public static class EnumerableExtensions
 
     public static IEnumerable<TItem> GetAllThatMatch<TItem>(this IEnumerable<TItem> items, Predicate<TItem> condition)
     {
-        foreach (var item in items)
-        {
-            if (condition(item))
-                yield return item;
-        }
+        return items.GetAllThatMatch(new PredicateCriteria<TItem>(condition));
     }
     public static IEnumerable<TItem> GetAllThatMatch<TItem>(this IEnumerable<TItem> items, ICriteria<TItem> criteria)
     {
@@ -35,4 +31,18 @@ public static class EnumerableExtensions
 public interface ICriteria<T>
 {
     bool IsSatisfiedBy(T item);
+}
+
+public class PredicateCriteria<T> : ICriteria<T>
+{
+    private Predicate<T> myPredicate;
+    public PredicateCriteria(Predicate<T> condition)
+    {
+        myPredicate = condition;
+    }
+
+    public bool IsSatisfiedBy(T pet)
+    {
+        return (myPredicate(pet));
+    }
 }
