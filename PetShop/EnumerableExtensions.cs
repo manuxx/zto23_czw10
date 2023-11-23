@@ -15,9 +15,7 @@ public static class EnumerableExtensions
 
     public static IEnumerable<TItem> ThatSatisfy<TItem>(this IEnumerable<TItem> items, Predicate<TItem> condition)
     {
-        Criteria<TItem> adapter = new PredicateCriteria<TItem>(condition);
-
-        return items.ThatSatisfy(adapter);
+        return items.ThatSatisfy(new PredicateCriteria<TItem>(condition));
     }
     public static IEnumerable<TItem> ThatSatisfy<TItem>(this IEnumerable<TItem> items, Criteria<TItem> criteria)
     {
@@ -31,14 +29,16 @@ public static class EnumerableExtensions
 
 public class PredicateCriteria<T> : Criteria<T>
 {
+    private readonly Predicate<T> _condition;
+
     public PredicateCriteria(Predicate<T> condition)
     {
-        throw new NotImplementedException();
+        _condition = condition;
     }
 
     public bool IsSatisfiedBy(T item)
     {
-        throw new NotImplementedException();
+        return _condition(item);
     }
 }
 
