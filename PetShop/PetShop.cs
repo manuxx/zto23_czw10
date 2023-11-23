@@ -42,15 +42,26 @@ namespace Training.DomainClasses
 
         public IEnumerable<Pet> AllCats()
         {
-            return _petsInTheStore.ThatMatch((pet => pet.species == Species.Cat));
+            return _petsInTheStore.ThatMatch(IsASpecieOf(Species.Cat));
         }
         public IEnumerable<Pet> AllMice()
         {
-            return _petsInTheStore.ThatMatch((pet => pet.species == Species.Mouse));
+            return _petsInTheStore.ThatMatch(IsASpecieOf(Species.Mouse));
         }
+
+        private static Predicate<Pet> IsASpecieOf(Species specie)
+        {
+            return (pet => pet.species == specie);
+        }
+
         public IEnumerable<Pet> AllFemalePets()
         {
-            return _petsInTheStore.ThatMatch((pet => pet.sex == Sex.Female));
+            return _petsInTheStore.ThatMatch(IsAFemale());
+        }
+
+        private static Predicate<Pet> IsAFemale()
+        {
+            return (pet => pet.sex == Sex.Female);
         }
 
         public IEnumerable<Pet> AllCatsOrDogs()
@@ -60,17 +71,27 @@ namespace Training.DomainClasses
 
         public IEnumerable<Pet> AllPetsButNotMice()
         {
-            return _petsInTheStore.ThatMatch((pet => pet.species != Species.Mouse));
+            return _petsInTheStore.ThatMatch(IsNotASpecieOf(Species.Mouse));
+        }
+
+        private static Predicate<Pet> IsNotASpecieOf(Species specie)
+        {
+            return pet => pet.species != specie;
         }
 
         public IEnumerable<Pet> AllPetsBornAfter2010()
         {
-            return _petsInTheStore.ThatMatch((pet => pet.yearOfBirth > 2010));
+            return _petsInTheStore.ThatMatch(IsBornAfter(2010));
         }
 
         public IEnumerable<Pet> AllDogsBornAfter2010()
         {
             return _petsInTheStore.ThatMatch((pet => pet.species == Species.Dog && pet.yearOfBirth > 2010));
+        }
+
+        private static Predicate<Pet> IsBornAfter(int year)
+        {
+            return (pet => pet.yearOfBirth > year);
         }
 
         public IEnumerable<Pet> AllMaleDogs()
