@@ -42,7 +42,7 @@ namespace Training.DomainClasses
 
         public IEnumerable<Pet> AllCats()
         {
-            return _petsInTheStore.ThatSatisfy((pet => pet.species == Species.Cat));
+            return _petsInTheStore.ThatSatisfy(IsASpeciesOf(Species.Cat) );
         }
         public IEnumerable<Pet> AllMice()
         {
@@ -66,7 +66,12 @@ namespace Training.DomainClasses
 
         public IEnumerable<Pet> AllFemalePets()
         {
-            return _petsInTheStore.ThatSatisfy((pet => pet.sex == Sex.Female));
+            return _petsInTheStore.ThatSatisfy(IsFemale());
+        }
+
+        private static Predicate<Pet> IsFemale()
+        {
+            return pet => pet.sex == Sex.Female;
         }
 
         public IEnumerable<Pet> AllCatsOrDogs()
@@ -76,10 +81,15 @@ namespace Training.DomainClasses
 
         public IEnumerable<Pet> AllPetsButNotMice()
         {
-            return _petsInTheStore.ThatSatisfy((pet => pet.species != Species.Mouse));
+            return _petsInTheStore.ThatSatisfy(IsNotASpeciesOf(Species.Mouse));
         }
 
-       
+        private static Predicate<Pet> IsNotASpeciesOf(Species species)
+        {
+            return pet => pet.species != species;
+        }
+
+
         public IEnumerable<Pet> AllDogsBornAfter2010()
         {
             return _petsInTheStore.ThatSatisfy((pet => pet.species == Species.Dog && pet.yearOfBirth > 2010));
