@@ -40,9 +40,9 @@ namespace Training.DomainClasses
         public float price { get; set; }
         public Species species { get; set; }
 
-        public static Predicate<Pet> IsASpeciesOf(Species species)
+        public static Criteria<Pet> IsASpeciesOf(Species species)
         {
-            return pet => pet.species == species;
+            return new SpeciesCriteria(species);
         }
 
         public static Criteria<Pet> IsBornAfter(int year)
@@ -50,29 +50,60 @@ namespace Training.DomainClasses
             return new BornCriteria(year);
         }
 
-        public static Predicate<Pet> IsFemale()
+        public static Criteria<Pet> IsFemale()
         {
-            return pet => pet.sex == Sex.Female;
+            return new SexCriteria(Sex.Female);
         }
 
         public static Predicate<Pet> IsNotASpeciesOf(Species species)
         {
             return pet => pet.species != species;
         }
-    }
-
-    public class BornCriteria : Criteria<Pet>
-    {
-        private readonly int _year;
-
-        public BornCriteria(int year)
+        public class SexCriteria : Criteria<Pet>
         {
-            _year = year;
+            private readonly Sex _sex;
+
+            public SexCriteria(Sex sex)
+            {
+                _sex = sex;
+            }
+
+            public bool IsSatisfiedBy(Pet pet)
+            {
+                return pet.sex == _sex;
+            }
         }
 
-        public bool IsSatisfiedBy(Pet item)
+        public class SpeciesCriteria : Criteria<Pet>
         {
-            return item.yearOfBirth > _year;
+            private readonly Species _species;
+
+            public SpeciesCriteria(Species species)
+            {
+                _species = species;
+            }
+
+            public bool IsSatisfiedBy(Pet pet)
+            {
+                return pet.species == _species;
+            }
+        }
+
+        public class BornCriteria : Criteria<Pet>
+        {
+            private readonly int _year;
+
+            public BornCriteria(int year)
+            {
+                _year = year;
+            }
+
+            public bool IsSatisfiedBy(Pet pet)
+            {
+                return pet.yearOfBirth > _year;
+            }
         }
     }
+
+    
 }
