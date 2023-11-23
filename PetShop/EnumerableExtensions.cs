@@ -26,23 +26,3 @@ public static class EnumerableExtensions
         }
     }
 }
-
-public class PredicateCriteria<T> : Criteria<T>
-{
-    private readonly Predicate<T> _condition;
-
-    public PredicateCriteria(Predicate<T> condition)
-    {
-        _condition = condition;
-    }
-
-    public bool IsSatisfiedBy(T item)
-    {
-        return _condition(item);
-    }
-}
-
-public interface Criteria<T>
-{
-    bool IsSatisfiedBy(T item);
-}
