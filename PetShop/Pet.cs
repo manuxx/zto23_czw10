@@ -40,14 +40,14 @@ namespace Training.DomainClasses
         public float price { get; set; }
         public Species species { get; set; }
 
-        public static Predicate<Pet> IsASpecieOf(Species specie)
+        public static Criteria<Pet> IsASpecieOf(Species specie)
         {
-            return (pet => pet.species == specie);
+            return new SpeciesCritera(specie);
         }
 
-        public static Predicate<Pet> IsAFemale()
+        public static Criteria<Pet> IsAFemale()
         {
-            return (pet => pet.sex == Sex.Female);
+            return new SexCriteria(Sex.Female);
         }
 
         public static Predicate<Pet> IsNotASpecieOf(Species specie)
@@ -58,6 +58,35 @@ namespace Training.DomainClasses
         public static Criteria<Pet> IsBornAfter(int year)
         {
             return new BornCriteria(year);
+        }
+    }
+
+    public class SexCriteria : Criteria<Pet>
+    {
+
+        private Sex _sex;
+        public SexCriteria(Sex sex)
+        {
+            _sex = sex;
+        }
+
+        public bool isSatisfiedBy(Pet item)
+        {
+            return item.sex == _sex;
+        }
+    }
+
+    public class SpeciesCritera : Criteria<Pet>
+    {
+        private Species _specie;
+        public SpeciesCritera(Species specie)
+        {
+            _specie = specie;
+        }
+
+        public bool isSatisfiedBy(Pet item)
+        {
+            return item.species == _specie;
         }
     }
 
