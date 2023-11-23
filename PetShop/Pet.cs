@@ -40,14 +40,14 @@ namespace Training.DomainClasses
         public float price { get; set; }
         public Species species { get; set; }
 
-        public static Predicate<Pet> IsASpeciesOf(Species species)
+        public static Criteria<Pet> IsASpeciesOf(Species species)
         {
-	        return pet => pet.species == species;
+	        return new SpeciesCriteria(species); //pet => pet.species == species;
         }
 
-        public static Predicate<Pet> IsFemale()
+        public static Criteria<Pet> IsFemale()
         {
-	        return pet => pet.sex == Sex.Female;
+	        return new SexCriteria(Sex.Female); //pet => pet.sex == Sex.Female;
         }
 
         public static Predicate<Pet> IsNotSpeciesOf(Species species)
@@ -55,9 +55,51 @@ namespace Training.DomainClasses
 	        return pet => pet.species != Species.Mouse;
         }
 
-        public static Predicate<Pet> BornAfter(int year)
+        public static Criteria<Pet> IsBornAfter(int year)
         {
-	        return pet => pet.yearOfBirth > year;
+	        return new BornCriteria(year);
         }
+    }
+
+    public class BornCriteria : Criteria<Pet>
+    {
+        private readonly int year;
+	    public BornCriteria(int year)
+	    {
+		    this.year = year;
+	    }
+
+		public bool IsSatisfiedBy(Pet pet)
+		{
+			return pet.yearOfBirth > year;
+		}
+	}
+
+    public class SpeciesCriteria : Criteria<Pet>
+    {
+	    private readonly Species species;
+	    public SpeciesCriteria(Species species)
+	    {
+		    this.species = species;
+	    }
+
+	    public bool IsSatisfiedBy(Pet pet)
+	    {
+		    return pet.species == species;
+	    }
+    }
+
+    public class SexCriteria : Criteria<Pet>
+    {
+	    private readonly Sex sex;
+	    public SexCriteria(Sex sex)
+	    {
+		    this.sex = sex;
+	    }
+
+	    public bool IsSatisfiedBy(Pet pet)
+	    {
+		    return pet.sex == sex;
+	    }
     }
 }
