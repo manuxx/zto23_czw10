@@ -15,11 +15,9 @@ public static class EnumerableExtensions
 
     public static IEnumerable<TItem> ThatMatch<TItem>(this IList<TItem> items, Predicate<TItem> condition)
     {
-        foreach (var item in items)
-        {
-            if (condition(item))
-                yield return item;
-        }
+        Criteria<TItem> adapter = new PredicateCriteria<TItem>(condition);
+
+        return items.ThatMatch(adapter);
     }
 
     public static IEnumerable<TItem> ThatMatch<TItem>(this IList<TItem> items, Criteria<TItem> criteria)
@@ -29,6 +27,20 @@ public static class EnumerableExtensions
             if (criteria.isSatisfiedBy(item))
                 yield return item;
         }
+    }
+}
+
+public class PredicateCriteria<T> : Criteria<T>
+{
+    private Predicate<T> myPredicate;
+    public PredicateCriteria(Predicate<T> condition)
+    {
+        myPredicate = condition;
+    }
+
+    public bool isSatisfiedBy(T item)
+    {
+        return (myPredicate(item));
     }
 }
 
