@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using Training.DomainClasses;
 
@@ -10,5 +11,14 @@ public static class EnumerableExtensions
         {
             yield return item;
         }
+    }
+
+    public static IEnumerable<TItem> ThatSatisfy<TItem>(this IList<TItem> items, Predicate<TItem> condition)
+    {
+	    foreach (var item in items)
+	    {
+		    if (condition(item))
+			    yield return item;
+	    }
     }
 }
