@@ -52,12 +52,27 @@ namespace Training.DomainClasses
 
         public static Predicate<Pet> IsBornAfter(int year)
         {
-            return pet => pet.yearOfBirth > year;
+            return pet => new BornCriteria(year).IsSatisfiedBy(pet);
         }
         
         public static Predicate<Pet> IsFemale()
         {
             return pet => pet.sex == Sex.Female;
+        }
+    }
+
+    public class BornCriteria : ICriteria<Pet>
+    {
+        private int _year;
+        public BornCriteria(int year)
+        {
+            _year = year;
+        }
+
+
+        public bool IsSatisfiedBy(Pet item)
+        {
+            return item.yearOfBirth > _year;
         }
     }
 }
