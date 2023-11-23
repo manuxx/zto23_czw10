@@ -42,7 +42,7 @@ namespace Training.DomainClasses
         
         public static Predicate<Pet> IsASpecieOf(Species specie)
         {
-            return pet => pet.species == specie;
+            return new SpecieCriteria(specie).IsSatisfiedBy;
         }
         
         public static Predicate<Pet> IsNotASpecieOf(Species specie)
@@ -58,6 +58,20 @@ namespace Training.DomainClasses
         public static Predicate<Pet> IsFemale()
         {
             return pet => pet.sex == Sex.Female;
+        }
+    }
+
+    public class SpecieCriteria : ICriteria<Pet>
+    {
+        private Species _specie;
+        public SpecieCriteria(Species specie)
+        {
+            _specie = specie;
+        }
+
+        public bool IsSatisfiedBy(Pet item)
+        {
+            return item.species == _specie;
         }
     }
 
