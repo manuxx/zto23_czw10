@@ -15,7 +15,7 @@ namespace Training.DomainClasses
 
         public IEnumerable<Pet> AllPets()
         {
-            return new ReadOnly(_petsInTheStore);
+            return new ReadOnly<Pet>(_petsInTheStore);
         }
 
         public void Add(Pet newPet)
@@ -42,67 +42,60 @@ namespace Training.DomainClasses
 
         public IEnumerable<Pet> AllCats()
         {
-            return FilerPets(pet => pet.species == Species.Cat);
-        }
-        public IEnumerable<Pet> AllMice()
-        {
-            return FilerPets(pet => pet.species == Species.Mouse);
-        }
-        public IEnumerable<Pet> AllFemalePets()
-        {
-            return FilerPets(pet => pet.sex == Sex.Female);
+            return _petsInTheStore.ThatSatisfy(pet => pet.species == Species.Cat);
         }
 
-        private IEnumerable<Pet> FilerPets(Func<Pet, bool> condition)
+        public IEnumerable<Pet> AllMice()
         {
-            foreach (var pet in _petsInTheStore)
-            {
-                if (condition(pet))
-                    yield return pet;
-            }
+            return _petsInTheStore.ThatSatisfy(Pet.IsASpecieOf(Species.Mouse));
+        }
+
+        public IEnumerable<Pet> AllFemalePets()
+        {
+            return _petsInTheStore.ThatSatisfy(Pet.IsSexOf(Sex.Female));
         }
 
         public IEnumerable<Pet> AllCatsOrDogs()
         {
-            return FilerPets(pet => pet.species == Species.Cat || pet.species == Species.Dog);
+            return _petsInTheStore.ThatSatisfy(pet => pet.species == Species.Cat || pet.species == Species.Dog);
         }
 
         public IEnumerable<Pet> AllPetsButNotMice()
         {
-            return FilerPets(pet => pet.species != Species.Mouse);
+            return _petsInTheStore.ThatSatisfy(Pet.IsSpecieNotOf(Species.Mouse));
         }
 
         public IEnumerable<Pet> AllPetsBornAfter2010()
         {
-            return FilerPets(pet => pet.yearOfBirth > 2010);
+            return _petsInTheStore.ThatSatisfy(Pet.IsBornAfter(2010));
         }
 
         public IEnumerable<Pet> AllDogsBornAfter2010()
         {
-            return FilerPets(pet => pet.species == Species.Dog && pet.yearOfBirth > 2010);
+            return _petsInTheStore.ThatSatisfy(pet => pet.species == Species.Dog && pet.yearOfBirth > 2010);
         }
 
         public IEnumerable<Pet> AllMaleDogs()
         {
-            return FilerPets(pet => pet.species == Species.Dog && pet.sex == Sex.Male);
+            return _petsInTheStore.ThatSatisfy(pet => pet.species == Species.Dog && pet.sex == Sex.Male);
         }
 
         public IEnumerable<Pet> AllPetsBornAfter2011OrRabbits()
         {
-            return FilerPets(pet => pet.species == Species.Rabbit || pet.yearOfBirth > 2011);
+            return _petsInTheStore.ThatSatisfy(pet => pet.species == Species.Rabbit || pet.yearOfBirth > 2011);
         }
     }
 
-    public class ReadOnly : IEnumerable<Pet>
+    public class ReadOnly<TItem> : IEnumerable<TItem>
     {
-        private readonly IEnumerable<Pet> _pets;
+        private readonly IEnumerable<TItem> _pets;
 
-        public ReadOnly(IEnumerable<Pet> pets)
+        public ReadOnly(IEnumerable<TItem> pets)
         {
             _pets = pets;
         }
 
-        public IEnumerator<Pet> GetEnumerator()
+        public IEnumerator<TItem> GetEnumerator()
         {
             return _pets.GetEnumerator();
         }
