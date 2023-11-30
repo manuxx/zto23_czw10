@@ -237,7 +237,8 @@ namespace Training.Specificaton
         };
         private It should_be_able_to_find_all_pets_born_after_2010 = () =>
         {
-            var foundPets = subject.AllPetsBornAfter2010();
+            var criteria = Where<Pet>.HasComparable(p => p.yearOfBirth).GreaterThan(2010);
+            var foundPets = subject.AllPets().ThatSatisfy(criteria);
             foundPets.ShouldContainOnly(dog_Pluto, rabbit_Fluffy, mouse_Dixie, mouse_Jerry);
         };
         private It should_be_able_to_find_all_young_dogs = () =>
@@ -264,6 +265,12 @@ namespace Training.Specificaton
         {
             return new CriteriaCreator<TItem, TProperty>(fieldExtractor);
         }
+
+        public static ComparableCriteriaCreator<TItem, TProperty> HasComparable<TProperty>(Func<TItem, TProperty> propertySelector)
+            where TProperty : IComparable<TProperty>
+        {
+            return new ComparableCriteriaCreator<TItem, TProperty>(propertySelector);
+        }
     }
 
     internal class CriteriaCreator<TItem, TProperty>
@@ -278,6 +285,26 @@ namespace Training.Specificaton
         public Criteria<TItem> EqualTo(TProperty species)
         {
             return new PredicateCriteria<TItem>(p => _fieldExtractor(p).Equals(species));
+        }
+    }
+
+    internal class ComparableCriteriaCreator<TItem, TProperty> where TProperty : IComparable<TProperty>
+    {
+        private readonly Func<TItem, TProperty> _propertySelector;
+
+        public ComparableCriteriaCreator(Func<TItem, TProperty> propertySelector)
+        {
+            _propertySelector = propertySelector;
+        }
+
+        public Criteria<TItem> EqualTo(TProperty value)
+        {
+            return new PredicateCriteria<TItem>(i => _propertySelector(i).Equals(value));
+        }
+
+        public Criteria<TItem> GreaterThan(TProperty v)
+        {
+            return new PredicateCriteria<TItem>(i => _propertySelector(i).CompareTo(v) > 0);
         }
     }
 
