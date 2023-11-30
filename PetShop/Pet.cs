@@ -57,7 +57,7 @@ namespace Training.DomainClasses
 
         public static Criteria<Pet> IsNotASpeciesOf(Species species)
         {
-            return new Negation(Pet.IsASpeciesOf(species));
+            return new Negation<Pet>(Pet.IsASpeciesOf(species));
         }
 
         public class SexCriteria : Criteria<Pet>
@@ -103,19 +103,6 @@ namespace Training.DomainClasses
             {
                 return pet.yearOfBirth > _year;
             }
-        }
-    }
-
-    public class Negation : Criteria<Pet>
-    {
-        public Negation(Criteria<Pet> isASpeciesOf)
-        {
-            throw new NotImplementedException();
-        }
-
-        public bool IsSatisfiedBy(Pet item)
-        {
-            throw new NotImplementedException();
         }
     }
 }
