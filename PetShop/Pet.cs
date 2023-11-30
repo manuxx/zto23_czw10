@@ -50,15 +50,16 @@ namespace Training.DomainClasses
             return new BornCriteria(year);
         }
 
+        public static Criteria<Pet> IsMale()
+        {
+            return new SexCriteria(Sex.Male);
+        }
+
         public static Criteria<Pet> IsFemale()
         {
             return new SexCriteria(Sex.Female);
         }
 
-        public static Predicate<Pet> IsNotASpeciesOf(Species species)
-        {
-            return pet => pet.species != species;
-        }
         public class SexCriteria : Criteria<Pet>
         {
             private readonly Sex _sex;
@@ -104,6 +105,4 @@ namespace Training.DomainClasses
             }
         }
     }
-
-    
 }
