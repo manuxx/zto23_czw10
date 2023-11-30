@@ -41,11 +41,11 @@ namespace Training.DomainClasses
 
         public IEnumerable<Pet> AllCats()
         {
-            return _petsInTheStore.ThatSatisfy(Pet.IsASpeciesOf(Species.Cat) );
+            return _petsInTheStore.ThatSatisfy(Pet.IsASpeciesOf(species: Species.Cat) );
         }
         public IEnumerable<Pet> AllMice()
         {
-            return _petsInTheStore.ThatSatisfy(Pet.IsASpeciesOf(Species.Mouse));
+            return _petsInTheStore.ThatSatisfy(Pet.IsASpeciesOf(species: Species.Mouse));
         }
 
         public IEnumerable<Pet> AllPetsBornAfter2010()
@@ -60,18 +60,18 @@ namespace Training.DomainClasses
 
         public IEnumerable<Pet> AllCatsOrDogs()
         {
-            return _petsInTheStore.ThatSatisfy(new Alternative<Pet>(Pet.IsASpeciesOf(Species.Cat),Pet.IsASpeciesOf(Species.Dog)));
+            return _petsInTheStore.ThatSatisfy(Pet.IsASpeciesOf(Species.Cat).Or(Pet.IsASpeciesOf(Species.Dog)));
         }
 
         public IEnumerable<Pet> AllPetsButNotMice()
         {
-            return _petsInTheStore.ThatSatisfy(new Negation<Pet>(Pet.IsASpeciesOf(Species.Mouse)));
+            return _petsInTheStore.ThatSatisfy(new Negation<Pet>(Pet.IsASpeciesOf(species: Species.Mouse)));
         }
 
 
         public IEnumerable<Pet> AllDogsBornAfter2010()
         {
-            return _petsInTheStore.ThatSatisfy(new Conjunction<Pet>(Pet.IsASpeciesOf(Species.Dog),Pet.IsBornAfter(2010)));
+            return _petsInTheStore.ThatSatisfy(Pet.IsASpeciesOf(Species.Dog).And(Pet.IsBornAfter(2010)));
         }
 
         public IEnumerable<Pet> AllMaleDogs()
