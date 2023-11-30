@@ -4,13 +4,18 @@ public interface Criteria<TItem>
 {
     bool IsSatisfiedBy(TItem item);
 
-    public Criteria<TItem> Or(Criteria<TItem> other)
+    public static Criteria<TItem> operator &(Criteria<TItem> a, Criteria<TItem> b)
     {
-        return new Alternative<TItem>(this, other);
+        return new Conjuction<TItem>(a, b);
     }
 
-    public Criteria<TItem> And(Criteria<TItem> other)
+    public static Criteria<TItem> operator |(Criteria<TItem> a, Criteria<TItem> b)
     {
-        return new Conjuction<TItem>(this, other);
+        return new Alternative<TItem>(a, b);
+    }
+
+    public static Criteria<TItem> operator !(Criteria<TItem> criteria)
+    {
+        return new Negation<TItem>(criteria);
     }
 }
