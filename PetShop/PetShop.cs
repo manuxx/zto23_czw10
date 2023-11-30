@@ -71,12 +71,12 @@ namespace Training.DomainClasses
 
         public IEnumerable<Pet> AllDogsBornAfter2010()
         {
-            return _petsInTheStore.ThatSatisfy((pet => pet.species == Species.Dog && pet.yearOfBirth > 2010));
+            return _petsInTheStore.ThatSatisfy(new Conjuction<Pet>(Pet.IsASpeciesOf(Species.Dog), Pet.IsBornAfter(2010)));
         }
 
         public IEnumerable<Pet> AllMaleDogs()
         {
-            return _petsInTheStore.ThatSatisfy((pet => pet.species == Species.Dog && pet.sex == Sex.Male));
+            return _petsInTheStore.ThatSatisfy(new Conjuction<Pet>(Pet.IsASpeciesOf(Species.Dog), new Negation<Pet>(Pet.IsFemale())));
         }
 
         public IEnumerable<Pet> AllPetsBornAfter2011OrRabbits()
