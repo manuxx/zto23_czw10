@@ -207,7 +207,9 @@ namespace Training.Specificaton
     {
         private It should_be_able_to_find_all_cats = () =>
         {
-            var foundPets = subject.AllCats();
+            Criteria<Pet> criteria = Where_Pet.HasAn(p => p.species).EqualTo(Species.Cat);
+            
+            var foundPets = subject.AllPets().ThatSatisfy(criteria);
             foundPets.ShouldContainOnly(cat_Tom, cat_Jinx);
         };
 
@@ -253,6 +255,27 @@ namespace Training.Specificaton
             foundPets.ShouldContainOnly(mouse_Jerry, rabbit_Fluffy);
         };
 
+    }
+
+    public static class Where_Pet
+    {
+        public static CriteriaCreator HasAn(Func<Pet, Species> fieldExtractor)
+        {
+            return new CriteriaCreator(fieldExtractor);
+        }
+    }
+
+    public class CriteriaCreator
+    {
+        private Func<Pet, Species> _fieldExtractor;
+        public CriteriaCreator(Func<Pet, Species> fieldExtractor)
+        {
+            _fieldExtractor = fieldExtractor;
+        }
+        public Criteria<Pet> EqualTo(Species species)
+        {
+            return new PredicateCriteria<Pet>(p => _fieldExtractor(p).Equals(species));
+        }
     }
 
 
