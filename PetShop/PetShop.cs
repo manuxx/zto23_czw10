@@ -41,7 +41,7 @@ namespace Training.DomainClasses
 
         public IEnumerable<Pet> AllCats()
         {
-            return _petsInTheStore.ThatSatisfy(Pet.IsASpeciesOf(Species.Cat) );
+            return _petsInTheStore.ThatSatisfy(Pet.IsASpeciesOf(Species.Cat));
         }
         public IEnumerable<Pet> AllMice()
         {
@@ -55,79 +55,33 @@ namespace Training.DomainClasses
 
         public IEnumerable<Pet> AllFemalePets()
         {
-            return _petsInTheStore.ThatSatisfy(Pet.IsFemale());
+            return _petsInTheStore.ThatSatisfy(Pet.IsSex(Sex.Female));
         }
 
         public IEnumerable<Pet> AllCatsOrDogs()
         {
-            return _petsInTheStore.ThatSatisfy((pet => pet.species == Species.Cat || pet.species == Species.Dog));
+            return _petsInTheStore.ThatSatisfy(Pet.IsASpeciesOf(Species.Cat) | Pet.IsASpeciesOf(Species.Dog));
         }
 
         public IEnumerable<Pet> AllPetsButNotMice()
         {
-            return _petsInTheStore.ThatSatisfy(Pet.IsNotASpeciesOf(Species.Mouse));
+            return _petsInTheStore.ThatSatisfy(!Pet.IsASpeciesOf(Species.Mouse));
         }
-
 
         public IEnumerable<Pet> AllDogsBornAfter2010()
         {
-            return _petsInTheStore.ThatSatisfy((pet => pet.species == Species.Dog && pet.yearOfBirth > 2010));
+            return _petsInTheStore.ThatSatisfy(Pet.IsASpeciesOf(Species.Dog) & Pet.IsBornAfter(2010));
         }
 
         public IEnumerable<Pet> AllMaleDogs()
         {
-            return _petsInTheStore.ThatSatisfy(new Conjunction<Pet>(Pet.IsASpeciesOf(Species.Dog), new Pet.SexCriteria(Sex.Male)));
+            return _petsInTheStore.ThatSatisfy(Pet.IsASpeciesOf(Species.Dog) & Pet.IsSex(Sex.Male));
         }
 
         public IEnumerable<Pet> AllPetsBornAfter2011OrRabbits()
         {
-            return _petsInTheStore.ThatSatisfy(new Disjunction<Pet>(Pet.IsASpeciesOf(Species.Rabbit), Pet.IsBornAfter(2011)));
+            return _petsInTheStore.ThatSatisfy(Pet.IsASpeciesOf(Species.Rabbit) | Pet.IsBornAfter(2011));
         }
     }
 
-    public class Disjunction<TItem> : Criteria<TItem>
-    {
-        private readonly Criteria<TItem>[] _criterias;
-
-        public Disjunction(params Criteria<TItem>[] criterias)
-        {
-            _criterias = criterias;
-        }
-
-        public bool IsSatisfiedBy(TItem item)
-        {
-            foreach (var criteria in _criterias)
-            {
-                if (criteria.IsSatisfiedBy(item))
-                {
-                    return true;
-                }
-            }
-
-            return false;
-        }
-    }
-
-    public class Conjunction<TItem> : Criteria<TItem>
-    {
-        private readonly Criteria<TItem>[] _criterias;
-
-        public Conjunction(params Criteria<TItem>[] criterias)
-        {
-            _criterias = criterias;
-        }
-
-        public bool IsSatisfiedBy(TItem item)
-        {
-            foreach (var criteria in _criterias)
-            {
-                if (!criteria.IsSatisfiedBy(item))
-                {
-                    return false;
-                }
-            }
-
-            return true;
-        }
-    }
 }
