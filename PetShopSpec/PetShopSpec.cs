@@ -257,6 +257,28 @@ namespace Training.Specificaton
 
     }
 
+    internal class Where<T>
+    {
+        public static CriteriaCreator HasAn(Func<Pet, Species> fieldExtractor)
+        {
+            return new CriteriaCreator(fieldExtractor);
+        }
+    }
+
+    internal class CriteriaCreator
+    {
+        private readonly Func<Pet, Species> _fieldExtractor;
+
+        public CriteriaCreator(Func<Pet, Species> fieldExtractor)
+        {
+            _fieldExtractor = fieldExtractor;
+        }
+
+        public Criteria<Pet> EqualTo(Species species)
+        {
+            return new PredicateCriteria<Pet>(p => _fieldExtractor(p).Equals(species));
+        }
+    }
 
     class when_sorting_pets : concern_with_pets_for_sorting_and_filtering
     {
