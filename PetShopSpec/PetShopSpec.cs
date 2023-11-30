@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using Training.DomainClasses;
 using Machine.Specifications;
 using It = Machine.Specifications.It;
+using Newtonsoft.Json.Linq;
 
 namespace Training.Specificaton
 {
@@ -206,7 +207,7 @@ namespace Training.Specificaton
 	{
 		private It should_be_able_to_find_all_cats = () =>
 		{
-			Criteria<Pet> criteria = Where_Pet.HasAn(p => p.species).EqualTo(Species.Cat);
+			Criteria<Pet> criteria = Where<Pet>.HasAn(p => p.species).EqualTo(Species.Cat);
 			var foundPets = subject.AllCats().ThatSatisfy(criteria);
 			foundPets.ShouldContainOnly(cat_Tom, cat_Jinx);
 		};
@@ -219,7 +220,8 @@ namespace Training.Specificaton
 
 		private It should_be_able_to_find_all_female_pets = () =>
 		{
-			var foundPets = subject.AllFemalePets();
+			var criteria = Where<Pet>.HasAn(p => p.sex).EqualTo(Sex.Female);
+			var foundPets = subject.AllFemalePets().ThatSatisfy(criteria);
 			foundPets.ShouldContainOnly(dog_Lassie, mouse_Dixie);
 		};
 
@@ -260,25 +262,25 @@ namespace Training.Specificaton
 		};
 	}
 
-	internal static class Where_Pet
+	internal static class Where<TItem>
 	{
-		public static CriteriaCreator HasAn(Func<Pet, Species> fieldExtractor)
+		public static CriteriaCreator<TItem, TProperty> HasAn<TProperty>(Func<TItem, TProperty> fieldExtractor)
 		{
-			return new CriteriaCreator(fieldExtractor);
+			return new CriteriaCreator<TItem, TProperty>(fieldExtractor);
 		}
 	}
 
-	internal class CriteriaCreator
+	internal class CriteriaCreator<TItem, TProperty>
 	{
-		private readonly Func<Pet, Species> _fieldExtractor;
-		public CriteriaCreator(Func<Pet, Species> fieldExtractor)
+		private readonly Func<TItem, TProperty> _fieldExtractor;
+		public CriteriaCreator(Func<TItem, TProperty> fieldExtractor)
 		{
 			_fieldExtractor = fieldExtractor;
 		}
 
-		public Criteria<Pet> EqualTo(Species species)
+		public Criteria<TItem> EqualTo(TProperty species)
 		{
-			return new PredicateCriteria<Pet>(p => _fieldExtractor(p).Equals(species));
+			return new PredicateCriteria<TItem>(p => _fieldExtractor(p).Equals(species));
 		}
 	}
 
