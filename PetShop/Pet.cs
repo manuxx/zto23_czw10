@@ -53,9 +53,14 @@ namespace Training.DomainClasses
         public static Criteria<Pet> IsFemale()
         {
             return new SexCriteria(Sex.Female);
+		}
+
+        public static Criteria<Pet> IsMale()
+        {
+	        return new SexCriteria(Sex.Male);
         }
 
-        public static Criteria<Pet> IsNotASpeciesOf(Species species)
+		public static Criteria<Pet> IsNotASpeciesOf(Species species)
         {
 	        return new Negation<Pet>(IsASpeciesOf(species));
         }
