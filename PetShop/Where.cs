@@ -12,6 +12,11 @@ namespace Training.DomainClasses
         {
             return new CriteriaBuilder<TItem, TProperty>(propertySelector);
         }
+
+        public static ComparableCriteriaBuilder<TItem, TProperty> HasComparable<TProperty>(Func<TItem, TProperty> propertySelector) where TProperty : IComparable<TProperty>
+        {
+            return new ComparableCriteriaBuilder<TItem, TProperty>(propertySelector);
+        }
     }
 
     public class CriteriaBuilder<TItem, TProperty>
@@ -26,6 +31,21 @@ namespace Training.DomainClasses
         public Criteria<TItem> EqualTo(TProperty species)
         {
             return new PredicateCriteria<TItem>(p => _propertySelector(p).Equals(species));
+        }
+    }
+
+    public class ComparableCriteriaBuilder<TItem, TProperty> where TProperty : IComparable<TProperty>
+    {
+        private readonly Func<TItem, TProperty> _propertySelector;
+
+        public ComparableCriteriaBuilder(Func<TItem, TProperty> propertySelector)
+        {
+            _propertySelector = propertySelector;
+        }
+
+        public Criteria<TItem> GreaterThan(TProperty v)
+        {
+            return new PredicateCriteria<TItem>(p => _propertySelector(p).CompareTo(v) > 0);
         }
     }
 }
