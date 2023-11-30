@@ -267,7 +267,6 @@ namespace Training.Specificaton
     internal class CriteriaCreator<TItem,TProperty>
     {
         private readonly Func<TItem, TProperty> _fieldExtractor;
-
         public CriteriaCreator(Func<TItem, TProperty> fieldExtractor)
         {
             _fieldExtractor = fieldExtractor;
