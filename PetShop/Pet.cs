@@ -55,10 +55,6 @@ namespace Training.DomainClasses
             return new SexCriteria(Sex.Female);
         }
 
-        public static Predicate<Pet> IsNotASpeciesOf(Species species)
-        {
-            return pet => pet.species != species;
-        }
         public class SexCriteria : Criteria<Pet>
         {
             private readonly Sex _sex;
@@ -104,6 +100,4 @@ namespace Training.DomainClasses
             }
         }
     }
-
-    
 }
