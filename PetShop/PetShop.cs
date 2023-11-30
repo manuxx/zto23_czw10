@@ -76,12 +76,58 @@ namespace Training.DomainClasses
 
         public IEnumerable<Pet> AllMaleDogs()
         {
-            return _petsInTheStore.ThatSatisfy((pet => pet.species == Species.Dog && pet.sex == Sex.Male));
+            return _petsInTheStore.ThatSatisfy(new Conjunction<Pet>(Pet.IsASpeciesOf(Species.Dog), new Pet.SexCriteria(Sex.Male)));
         }
 
         public IEnumerable<Pet> AllPetsBornAfter2011OrRabbits()
         {
-            return _petsInTheStore.ThatSatisfy((pet => pet.species == Species.Rabbit || pet.yearOfBirth > 2011));
+            return _petsInTheStore.ThatSatisfy(new Disjunction<Pet>(Pet.IsASpeciesOf(Species.Rabbit), Pet.IsBornAfter(2011)));
+        }
+    }
+
+    public class Disjunction<TItem> : Criteria<TItem>
+    {
+        private readonly Criteria<TItem>[] _criterias;
+
+        public Disjunction(params Criteria<TItem>[] criterias)
+        {
+            _criterias = criterias;
+        }
+
+        public bool IsSatisfiedBy(TItem item)
+        {
+            foreach (var criteria in _criterias)
+            {
+                if (criteria.IsSatisfiedBy(item))
+                {
+                    return true;
+                }
+            }
+
+            return false;
+        }
+    }
+
+    public class Conjunction<TItem> : Criteria<TItem>
+    {
+        private readonly Criteria<TItem>[] _criterias;
+
+        public Conjunction(params Criteria<TItem>[] criterias)
+        {
+            _criterias = criterias;
+        }
+
+        public bool IsSatisfiedBy(TItem item)
+        {
+            foreach (var criteria in _criterias)
+            {
+                if (!criteria.IsSatisfiedBy(item))
+                {
+                    return false;
+                }
+            }
+
+            return true;
         }
     }
 }
