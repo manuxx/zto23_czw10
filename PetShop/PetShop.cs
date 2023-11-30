@@ -1,4 +1,3 @@
-using System;
 using System.Collections.Generic;
 
 namespace Training.DomainClasses
@@ -9,7 +8,7 @@ namespace Training.DomainClasses
 
         public PetShop(IList<Pet> petsInTheStore)
         {
-            this._petsInTheStore = petsInTheStore;
+            _petsInTheStore = petsInTheStore;
         }
 
         public IEnumerable<Pet> AllPets()
@@ -19,30 +18,30 @@ namespace Training.DomainClasses
 
         public void Add(Pet newPet)
         {
-           
-                foreach (var pet in _petsInTheStore)
+            foreach (var pet in _petsInTheStore)
+            {
+                if (pet.name == newPet.name)
                 {
-                    if (pet.name == newPet.name)
-                    {
-                        return;
-                    }
+                    return;
                 }
-                _petsInTheStore.Add(newPet);
+            }
 
+            _petsInTheStore.Add(newPet);
         }
 
 
         public IEnumerable<Pet> AllPetsSortedByName()
         {
             var ret = new List<Pet>(_petsInTheStore);
-            ret.Sort((p1,p2)=>p1.name.CompareTo(p2.name));
+            ret.Sort((p1, p2) => p1.name.CompareTo(p2.name));
             return ret;
         }
 
         public IEnumerable<Pet> AllCats()
         {
-            return _petsInTheStore.ThatSatisfy(Pet.IsASpeciesOf(Species.Cat) );
+            return _petsInTheStore.ThatSatisfy(Pet.IsASpeciesOf(Species.Cat));
         }
+
         public IEnumerable<Pet> AllMice()
         {
             return _petsInTheStore.ThatSatisfy(Pet.IsASpeciesOf(Species.Mouse));
@@ -67,7 +66,7 @@ namespace Training.DomainClasses
         {
             return _petsInTheStore.ThatSatisfy(new Negation<Pet>(new Pet.SpeciesCriteria(Species.Mouse)));
         }
-        
+
         public IEnumerable<Pet> AllDogsBornAfter2010()
         {
             return _petsInTheStore.ThatSatisfy(new Conjunction<Pet>(Pet.IsASpeciesOf(Species.Dog), Pet.IsBornAfter(2010)));
@@ -80,7 +79,7 @@ namespace Training.DomainClasses
 
         public IEnumerable<Pet> AllPetsBornAfter2011OrRabbits()
         {
-            return _petsInTheStore.ThatSatisfy((pet => pet.species == Species.Rabbit || pet.yearOfBirth > 2011));
+            return _petsInTheStore.ThatSatisfy(new Alternative<Pet>(Pet.IsASpeciesOf(Species.Rabbit), Pet.IsBornAfter(2011)));
         }
     }
 }
