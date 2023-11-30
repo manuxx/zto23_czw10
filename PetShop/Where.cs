@@ -6,26 +6,26 @@ using System.Threading.Tasks;
 
 namespace Training.DomainClasses
 {
-    public class Where_Pet
+    public class Where<TItem>
     {
-        public static CriteriaBuilder HasAn(Func<Pet, Species> propertySelector)
+        public static CriteriaBuilder<TItem, TProperty> HasAn<TProperty>(Func<TItem, TProperty> propertySelector)
         {
-            return new CriteriaBuilder(propertySelector);
+            return new CriteriaBuilder<TItem, TProperty>(propertySelector);
         }
     }
 
-    public class CriteriaBuilder
+    public class CriteriaBuilder<TItem, TProperty>
     {
-        private readonly Func<Pet, Species> _propertySelector;
+        private readonly Func<TItem, TProperty> _propertySelector;
 
-        public CriteriaBuilder(Func<Pet, Species> propertySelector)
+        public CriteriaBuilder(Func<TItem, TProperty> propertySelector)
         {
             _propertySelector = propertySelector;
         }
 
-        public Criteria<Pet> EqualTo(Species species)
+        public Criteria<TItem> EqualTo(TProperty species)
         {
-            return new PredicateCriteria<Pet>(p => _propertySelector(p).Equals(species));
+            return new PredicateCriteria<TItem>(p => _propertySelector(p).Equals(species));
         }
     }
 }
