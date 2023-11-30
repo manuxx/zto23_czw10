@@ -207,7 +207,7 @@ namespace Training.Specificaton
     {
         private It should_be_able_to_find_all_cats = () =>
         {
-            Criteria<Pet> criteria = Where<Pet>.HasAn(p => p.species).EqualTo(Species.Cat);
+            Criteria<Pet> criteria = Where_Pet<Pet>.HasAn(p => p.species).EqualTo(Species.Cat);
             var foundPets = subject.AllPets().ThatSatisfy(criteria);
             foundPets.ShouldContainOnly(cat_Tom, cat_Jinx);
         };
@@ -220,7 +220,8 @@ namespace Training.Specificaton
         
         private It should_be_able_to_find_all_female_pets = () =>
         {
-            var foundPets = subject.AllFemalePets();
+            var criteria = Where_Pet<Pet>.HasAn(p => p.sex).EqualTo(Sex.Female);
+            var foundPets = subject.AllPets().ThatSatisfy(criteria);
             foundPets.ShouldContainOnly(dog_Lassie, mouse_Dixie);
         };
         private It should_be_able_to_find_all_cats_or_dogs = () =>
@@ -235,7 +236,8 @@ namespace Training.Specificaton
         };
         private It should_be_able_to_find_all_pets_born_after_2010 = () =>
         {
-            var foundPets = subject.AllPetsBornAfter2010();
+            var criteria = Where_Pet<Pet>.HasAn(p => p.yearOfBirth).GreaterThan(2010);
+            var foundPets = subject.AllPets()
             foundPets.ShouldContainOnly(dog_Pluto, rabbit_Fluffy, mouse_Dixie, mouse_Jerry);
         };
         private It should_be_able_to_find_all_young_dogs = () =>
@@ -256,6 +258,33 @@ namespace Training.Specificaton
 
     }
 
+    public class Where_Pet<TItem>
+    {
+        public static CriteriaCreator<TItem, TProperty> HasAn<TProperty>(Func<TItem, TProperty> fieldExtractor)
+        {
+            return new CriteriaCreator<TItem, TProperty>(fieldExtractor);
+        }
+    }
+
+    public class CriteriaCreator<TProperty, TItem>
+    {
+        private Func<TProperty, TItem> _fieldExtractor;
+        public CriteriaCreator(Func<TProperty, TItem> fieldExtractor)
+        {
+            _fieldExtractor = fieldExtractor;
+        }
+
+        public Criteria<TProperty> EqualTo(TItem cat)
+        {
+            return new PredicateCriteria<TProperty>(p => _fieldExtractor(p).Equals(cat));
+        }
+
+        public Criteria<TItem> GreaterThan<TComparableProperty>(TComparableProperty v)
+            where TComparableProperty : IComparable<TProperty>
+        {
+            return new PredicateCriteria<TItem>(p => v.CompareTo());
+        }
+    }
 
     class when_sorting_pets : concern_with_pets_for_sorting_and_filtering
     {
