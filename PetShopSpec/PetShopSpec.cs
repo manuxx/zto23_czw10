@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using Training.DomainClasses;
 using Machine.Specifications;
 using It = Machine.Specifications.It;
@@ -207,7 +208,8 @@ namespace Training.Specificaton
     {
         private It should_be_able_to_find_all_cats = () =>
         {
-            var foundPets = subject.AllCats();
+	        Criteria<Pet> criteria = Where_Pet.HasAn(p => p.species).EqualTo(Species.Cat);
+            var foundPets = subject.AllPets().ThatSatisfy(criteria);
             foundPets.ShouldContainOnly(cat_Tom, cat_Jinx);
         };
 
@@ -255,8 +257,32 @@ namespace Training.Specificaton
 
     }
 
+    internal class Where_Pet
+    {
+        public static Cos HasAn(Func<Pet, Species> fieldExtractor)
+        {
+	        return new Cos(fieldExtractor);
+        }
+    }
 
-    class when_sorting_pets : concern_with_pets_for_sorting_and_filtering
+    internal class Cos
+    {
+	    private readonly Func<Pet, Species> _fieldExtractor;
+
+	    public Cos(Func<Pet, Species> fieldExtractor)
+	    {
+		    _fieldExtractor = fieldExtractor;
+	    }
+
+	    public Criteria<Pet> EqualTo(Species species)
+	    {
+		    return new PredicateCriteria<Pet>(p => _fieldExtractor(p).Equals(species));
+	    }
+
+	}
+
+
+	class when_sorting_pets : concern_with_pets_for_sorting_and_filtering
     {
         It should_be_able_to_sort_by_name_ascending = () =>
         {
