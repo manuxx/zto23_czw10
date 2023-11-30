@@ -45,6 +45,11 @@ namespace Training.DomainClasses
             return new SpeciesCriteria(species);
         }
 
+        public static Criteria<Pet> IsMale()
+        {
+            return new SexCriteria(Sex.Male);
+        }
+
         public static Criteria<Pet> IsBornAfter(int year)
         {
             return new BornCriteria(year);
