@@ -12,16 +12,14 @@ public static class EnumerableExtensions
             yield return item;
         }
     }
-    
-    public static IEnumerable<T> ThatSatisfy<T>(this IEnumerable<T> collection, Predicate<T> condition)
+
+    public static IEnumerable<TItem> ThatSatisfy<TItem>(this IEnumerable<TItem> items, Predicate<TItem> condition)
     {
-        ICriteria<T> adapter = new PredicateCriteria<T>(condition);
-        return collection.ThatSatisfy(adapter);
+        return items.ThatSatisfy(new PredicateCriteria<TItem>(condition));
     }
-    
-    public static IEnumerable<T> ThatSatisfy<T>(this IEnumerable<T> collection, ICriteria<T> criteria)
+    public static IEnumerable<TItem> ThatSatisfy<TItem>(this IEnumerable<TItem> items, Criteria<TItem> criteria)
     {
-        foreach (var item in collection)
+        foreach (var item in items)
         {
             if (criteria.IsSatisfiedBy(item))
                 yield return item;

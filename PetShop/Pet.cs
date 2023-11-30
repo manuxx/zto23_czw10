@@ -39,54 +39,71 @@ namespace Training.DomainClasses
         public int yearOfBirth { get; set; }
         public float price { get; set; }
         public Species species { get; set; }
-        
-        public static Predicate<Pet> IsASpecieOf(Species specie)
+
+        public static Criteria<Pet> IsASpeciesOf(Species species)
         {
-            return new SpecieCriteria(specie).IsSatisfiedBy;
-        }
-        
-        public static Predicate<Pet> IsNotASpecieOf(Species specie)
-        {
-            return pet => pet.species != specie;
+            return new SpeciesCriteria(species);
         }
 
-        public static Predicate<Pet> IsBornAfter(int year)
+        public static Criteria<Pet> IsBornAfter(int year)
         {
-            return pet => new BornCriteria(year).IsSatisfiedBy(pet);
+            return new BornCriteria(year);
         }
-        
-        public static Predicate<Pet> IsFemale()
+
+        public static Criteria<Pet> IsFemale()
         {
-            return pet => pet.sex == Sex.Female;
+            return new SexCriteria(Sex.Female);
+        }
+
+        public static Predicate<Pet> IsNotASpeciesOf(Species species)
+        {
+            return pet => pet.species != species;
+        }
+        public class SexCriteria : Criteria<Pet>
+        {
+            private readonly Sex _sex;
+
+            public SexCriteria(Sex sex)
+            {
+                _sex = sex;
+            }
+
+            public bool IsSatisfiedBy(Pet pet)
+            {
+                return pet.sex == _sex;
+            }
+        }
+
+        public class SpeciesCriteria : Criteria<Pet>
+        {
+            private readonly Species _species;
+
+            public SpeciesCriteria(Species species)
+            {
+                _species = species;
+            }
+
+            public bool IsSatisfiedBy(Pet pet)
+            {
+                return pet.species == _species;
+            }
+        }
+
+        public class BornCriteria : Criteria<Pet>
+        {
+            private readonly int _year;
+
+            public BornCriteria(int year)
+            {
+                _year = year;
+            }
+
+            public bool IsSatisfiedBy(Pet pet)
+            {
+                return pet.yearOfBirth > _year;
+            }
         }
     }
 
-    public class SpecieCriteria : ICriteria<Pet>
-    {
-        private Species _specie;
-        public SpecieCriteria(Species specie)
-        {
-            _specie = specie;
-        }
-
-        public bool IsSatisfiedBy(Pet item)
-        {
-            return item.species == _specie;
-        }
-    }
-
-    public class BornCriteria : ICriteria<Pet>
-    {
-        private int _year;
-        public BornCriteria(int year)
-        {
-            _year = year;
-        }
-
-
-        public bool IsSatisfiedBy(Pet item)
-        {
-            return item.yearOfBirth > _year;
-        }
-    }
+    
 }

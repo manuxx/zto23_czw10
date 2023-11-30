@@ -1,14 +1,15 @@
 using System;
 
-public class PredicateCriteria<T> : ICriteria<T>
+public class PredicateCriteria<TItem> : Criteria<TItem>
 {
-    private Predicate<T> _condition;
-    public PredicateCriteria(Predicate<T> condition)
+    private readonly Predicate<TItem> _condition;
+
+    public PredicateCriteria(Predicate<TItem> condition)
     {
         _condition = condition;
     }
 
-    public bool IsSatisfiedBy(T item)
+    public bool IsSatisfiedBy(TItem item)
     {
         return _condition(item);
     }
