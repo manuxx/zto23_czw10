@@ -207,19 +207,22 @@ namespace Training.Specificaton
     {
         private It should_be_able_to_find_all_cats = () =>
         {
-            var foundPets = subject.AllCats();
+            Criteria<Pet> criteria = Where<Pet>.HasAn(p => p.species).EqualTo(Species.Cat);
+            var foundPets = subject.AllPets().ThatSatisfy(criteria);
             foundPets.ShouldContainOnly(cat_Tom, cat_Jinx);
         };
 
         private It should_be_able_to_find_all_mice = () =>
         {
-            var foundPets = subject.AllMice();
+            Criteria<Pet> criteria = Where<Pet>.HasAn(p => p.species).EqualTo(Species.Mouse);
+            var foundPets = subject.AllPets().ThatSatisfy(criteria);
             foundPets.ShouldContainOnly(mouse_Dixie, mouse_Jerry);
         };
         
         private It should_be_able_to_find_all_female_pets = () =>
         {
-            var foundPets = subject.AllFemalePets();
+            Criteria<Pet> criteria = Where<Pet>.HasAn(p => p.sex).EqualTo(Sex.Female);
+            var foundPets = subject.AllPets().ThatSatisfy(criteria);
             foundPets.ShouldContainOnly(dog_Lassie, mouse_Dixie);
         };
         private It should_be_able_to_find_all_cats_or_dogs = () =>
@@ -255,6 +258,26 @@ namespace Training.Specificaton
 
     }
 
+    public static class Where<TItem>
+    {
+        public static CriteriaCreator<TItem, TProperty> HasAn<TProperty>(Func<TItem, TProperty> fieldExtractor)
+        {
+            return new CriteriaCreator<TItem, TProperty>(fieldExtractor);
+        }
+    }
+
+    public class CriteriaCreator<TItem, TProperty>
+    {
+        private Func<TItem, TProperty> _fieldExtractor;
+        public CriteriaCreator(Func<TItem, TProperty> fieldExtractor)
+        {
+            _fieldExtractor = fieldExtractor;
+        }
+        public Criteria<TItem> EqualTo(TProperty species)
+        {
+            return new PredicateCriteria<TItem>(p => _fieldExtractor(p).Equals(species));
+        }
+    }
 
     class when_sorting_pets : concern_with_pets_for_sorting_and_filtering
     {
