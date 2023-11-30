@@ -239,7 +239,8 @@ namespace Training.Specificaton
         };
         private It should_be_able_to_find_all_pets_born_after_2010 = () =>
         {
-            var foundPets = subject.AllPetsBornAfter2010();
+            var criteria = ComparableWhere<Pet>.HasAn(p => p.yearOfBirth).GreaterThan(2010);
+            var foundPets = subject.AllPets().ThatSatisfy(criteria);
             foundPets.ShouldContainOnly(dog_Pluto, rabbit_Fluffy, mouse_Dixie, mouse_Jerry);
         };
         private It should_be_able_to_find_all_young_dogs = () =>
@@ -258,6 +259,32 @@ namespace Training.Specificaton
             foundPets.ShouldContainOnly(mouse_Jerry, rabbit_Fluffy);
         };
 
+    }
+
+    public static class ComparableWhere<TItem>
+    {
+        public static ComparableCriteriaCreator<TItem, TProperty> HasAn<TProperty>(Func<TItem, TProperty> fieldExtractor) where TProperty: IComparable<TProperty>
+        {
+            return new ComparableCriteriaCreator<TItem, TProperty>(fieldExtractor);
+        }
+    }
+
+    public class ComparableCriteriaCreator<TItem, TProperty> where TProperty : IComparable<TProperty>
+    {
+        private Func<TItem, TProperty> _fieldExtractor;
+        public ComparableCriteriaCreator(Func<TItem, TProperty> fieldExtractor)
+        {
+            _fieldExtractor = fieldExtractor;
+        }
+        public Criteria<TItem> EqualTo(TProperty species)
+        {
+            return new PredicateCriteria<TItem>(p => _fieldExtractor(p).Equals(species));
+        }
+
+        public Criteria<TItem> GreaterThan(TProperty value)
+        {
+            return new PredicateCriteria<TItem>(p => _fieldExtractor(p).CompareTo(value)>0);
+        }
     }
 
     public static class Where<TItem>
