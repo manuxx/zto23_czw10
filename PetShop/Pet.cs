@@ -1,4 +1,5 @@
 using System;
+using static Training.DomainClasses.Pet;
 
 namespace Training.DomainClasses
 {
@@ -59,6 +60,13 @@ namespace Training.DomainClasses
         {
             return new Negation<Pet>(IsASpeciesOf(species));
         }
+
+        public static Criteria<Pet> IsMale()
+        {
+            return new SexCriteria(Sex.Male);
+
+        }
+
         public class SexCriteria : Criteria<Pet>
         {
             private readonly Sex _sex;
