@@ -1,6 +1,6 @@
 namespace Training.DomainClasses;
 
-public static class CriteriaExtension
+public static class CriteriaExtensions
 {
 
     public static Negation<T> Not<T>(this Criteria<T> criteria)
