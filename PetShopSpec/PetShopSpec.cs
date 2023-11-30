@@ -207,7 +207,8 @@ namespace Training.Specificaton
     {
         private It should_be_able_to_find_all_cats = () =>
         {
-            var foundPets = subject.AllCats();
+            Criteria<Pet> criteria = Where<Pet>.HasAn(p => p.species).EqualTo(Species.Cat);
+            var foundPets = subject.AllPets().ThatSatisfy(criteria);
             foundPets.ShouldContainOnly(cat_Tom, cat_Jinx);
         };
 
@@ -219,7 +220,8 @@ namespace Training.Specificaton
         
         private It should_be_able_to_find_all_female_pets = () =>
         {
-            var foundPets = subject.AllFemalePets();
+            Criteria<Pet> criteria = Where<Pet>.HasAn(p => p.sex).EqualTo(Sex.Female);
+            var foundPets = subject.AllPets().ThatSatisfy(criteria);
             foundPets.ShouldContainOnly(dog_Lassie, mouse_Dixie);
         };
         private It should_be_able_to_find_all_cats_or_dogs = () =>
@@ -234,7 +236,8 @@ namespace Training.Specificaton
         };
         private It should_be_able_to_find_all_pets_born_after_2010 = () =>
         {
-            var foundPets = subject.AllPetsBornAfter2010();
+            var criteria = Where<Pet>.HasComparable(p => p.yearOfBirth).GreaterThan(2010);
+            var foundPets = subject.AllPets().ThatSatisfy(criteria);
             foundPets.ShouldContainOnly(dog_Pluto, rabbit_Fluffy, mouse_Dixie, mouse_Jerry);
         };
         private It should_be_able_to_find_all_young_dogs = () =>
@@ -255,6 +258,54 @@ namespace Training.Specificaton
 
     }
 
+    internal class Where<TItem> 
+    {
+        public static ComparableCriteriaBuilder<TItem, TProperty> HasComparable<TProperty>(Func<TItem, TProperty> getProperty) where TProperty : IComparable<TProperty>
+        {
+            return new ComparableCriteriaBuilder<TItem, TProperty>(getProperty);
+        }
+        public static CriteriaBuilder<TItem, TProperty> HasAn<TProperty>(Func<TItem, TProperty> getProperty)
+        {
+            return new CriteriaBuilder<TItem, TProperty>(getProperty);
+        }
+    }
+
+    internal class CriteriaBuilder<TItem, TProperty>
+    {
+        private readonly Func<TItem, TProperty> _getProperty;
+
+        public CriteriaBuilder(Func<TItem, TProperty> getProperty)
+        {
+            _getProperty = getProperty;
+        }
+
+        public Criteria<TItem> EqualTo(TProperty property)
+        {
+            return new PredicateCriteria<TItem>(p => _getProperty(p).Equals(property));
+        }
+
+    }
+
+
+    internal class ComparableCriteriaBuilder<TItem, TProperty> where TProperty : IComparable<TProperty>
+    {
+        private readonly Func<TItem, TProperty> _getProperty;
+
+        public ComparableCriteriaBuilder(Func<TItem, TProperty> getProperty)
+        {
+            _getProperty = getProperty;
+        }
+
+        public Criteria<TItem> EqualTo(TProperty property)
+        {
+            return new PredicateCriteria<TItem>(p => _getProperty(p).Equals(property));
+        }
+
+        public Criteria<TItem> GreaterThan(TProperty property)
+        {
+            return new PredicateCriteria<TItem>(p => _getProperty(p).CompareTo(property) > 0);
+        }
+    }
 
     class when_sorting_pets : concern_with_pets_for_sorting_and_filtering
     {
