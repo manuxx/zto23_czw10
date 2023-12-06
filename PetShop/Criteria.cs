@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 
 public interface Criteria<TItem>
 {
@@ -75,43 +76,8 @@ public class Negation<TItem> : Criteria<TItem>
 
 public class Where<TItem>
 {
-    public static CriteriaCreator<TItem, TProperty> HasAn<TProperty>(Func<TItem, TProperty> fieldExtractor)
+    public static CriteriaCreator<TItem, TProperty> Has<TProperty>(Func<TItem, TProperty> fieldExtractor)
     {
         return new CriteriaCreator<TItem, TProperty>(fieldExtractor);
-    }
-
-    public static ComparableCriteriaCreator<TItem, TProperty> HasComparable<TProperty>(Func<TItem, TProperty> fieldExtractor) where TProperty : IComparable<TProperty>
-    {
-        return new ComparableCriteriaCreator<TItem, TProperty>(fieldExtractor);
-    }
-}
-
-public class ComparableCriteriaCreator<TItem, TProperty> where TProperty : IComparable<TProperty>
-{
-    private readonly Func<TItem, TProperty> _fieldExtractor;
-
-    public ComparableCriteriaCreator(Func<TItem, TProperty> fieldExtractor)
-    {
-        _fieldExtractor = fieldExtractor;
-    }
-
-    public Criteria<TItem> GreaterThan(TProperty item)
-    {
-        return new PredicateCriteria<TItem>(p => _fieldExtractor(p).CompareTo(item) > 0);
-    }
-}
-
-public class CriteriaCreator<TItem, TProperty>
-{
-    private readonly Func<TItem, TProperty> _fieldExtractor;
-
-    public CriteriaCreator(Func<TItem, TProperty> fieldExtractor)
-    {
-        _fieldExtractor = fieldExtractor;
-    }
-
-    public Criteria<TItem> EqualTo(TProperty item)
-    {
-        return new PredicateCriteria<TItem>(p => _fieldExtractor(p).Equals(item));
     }
 }
